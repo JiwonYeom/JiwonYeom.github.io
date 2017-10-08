@@ -3,17 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: Network | Code Jingles</title>
+    <title>Symfony Review-1 | Code Jingles</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Code Jingles">
-<meta property="og:url" content="http://yoursite.com/categories/Network/index.html">
+        <meta name="keywords" content="Symfony,PHP,Framework" />
+    
+    <meta name="description" content="Reviews on Trying out Symfony(1)I have been trying out Symfony today, and while I was working on it, I faced some difficulties and issues.I decided to leave some progress review on this. Installing Sy">
+<meta name="keywords" content="Symfony,PHP,Framework">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Symfony Review-1">
+<meta property="og:url" content="http://yoursite.com/2017/10/08/symfony-review-1/index.html">
 <meta property="og:site_name" content="Code Jingles">
+<meta property="og:description" content="Reviews on Trying out Symfony(1)I have been trying out Symfony today, and while I was working on it, I faced some difficulties and issues.I decided to leave some progress review on this. Installing Sy">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-08T10:17:08.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Code Jingles">
+<meta name="twitter:title" content="Symfony Review-1">
+<meta name="twitter:description" content="Reviews on Trying out Symfony(1)I have been trying out Symfony today, and while I was working on it, I faced some difficulties and issues.I decided to leave some progress review on this. Installing Sy">
     
 
     <!-- add font for custom -->
@@ -117,58 +124,155 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Network</em>
+    <a class="page-title-link" href="/categories/PHP/">PHP</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-symfony-review-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Network/">Network</a>
-            </div>
-            <div class="date"><time datetime="2017-10-08T09:46:01.000Z" itemprop="datePublished">2017-10-08</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/10/08/Domain-DNS/">Domain &amp; DNS</a>
+        Symfony Review-1
         </h1>
     
 
-        <p class="article-excerpt">
-            Moved From TIL post
-For those of you who have absolutely NO IDEA about the website url - like I was (and still partially am) - This is a simple guide.
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/08/symfony-review-1/" class="article-date">
+            <time datetime="2017-10-08T10:16:02.000Z" itemprop="datePublished">2017-10-08</time>
+        </a>
+    </div>
 
-Urls are made out of protocol part and resource 
-        </p>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Framework/">Framework</a>, <a class="tag-link" href="/tags/PHP/">PHP</a>, <a class="tag-link" href="/tags/Symfony/">Symfony</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="Reviews-on-Trying-out-Symfony-1"><a href="#Reviews-on-Trying-out-Symfony-1" class="headerlink" title="Reviews on Trying out Symfony(1)"></a>Reviews on Trying out Symfony(1)</h2><p>I have been trying out Symfony today, and while I was working on it, I faced some difficulties and issues.<br>I decided to leave some progress review on this.</p>
+<h4 id="Installing-Symfony"><a href="#Installing-Symfony" class="headerlink" title="Installing Symfony"></a>Installing Symfony</h4><p>This is simple if you follow the <a href="https://symfony.com/doc/current/setup.html" target="_blank" rel="external">official guide</a>. But one thing to remember: <code>symfony</code> command might NOT work if you don’t turn off &amp; on your terminal. Mine didn’t. If your command doesn’t work, turn your terminal off &amp; on again.</p>
+<blockquote>
+<p>symfony new [projectName]</p>
+</blockquote>
+<p>Should be enough to create your new project. Do NOT forget to change your root in <code>nginx.conf</code> file (If you are doing this on a nginx web server).</p>
+<h4 id="The-console"><a href="#The-console" class="headerlink" title="The console"></a>The console</h4><p>Symfony can be managed by its own console and its commands, such as running its server or checking status, etc.</p>
+<ul>
+<li>Useful commands<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//check routed url list</div><div class="line">php bin/console debug:router</div><div class="line"></div><div class="line">//refresh cache</div><div class="line"> php bin/console cache:clear --env=prod</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="File-Directory"><a href="#File-Directory" class="headerlink" title="File Directory"></a>File Directory</h4><ul>
+<li>src-AppBundle contains Controller.</li>
+<li>Resources-views contains view files.<br>Which are two main places where you might want to begin.</li>
+</ul>
+<h4 id="Twig-engine"><a href="#Twig-engine" class="headerlink" title="Twig engine"></a>Twig engine</h4><p>Symfony uses html twig engine for its view as long as I have seen. I skimmed through the configs, and it seems like different rendering engine can be chosen, but this is interesting for me. So far, PHP frameworks that I used had plain HTMLs as its view templates.</p>
+<h4 id="Routing"><a href="#Routing" class="headerlink" title="Routing"></a>Routing</h4><p>Routing is quite different from that of CI or Drupal, which are frameworks that I am familiar with. It uses a sort of <em>annotation</em>, which looks like the following<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @Route(&quot;/happy/name&quot;)</div><div class="line"> */</div></pre></td></tr></table></figure></p>
+<p>This defines url pattern. But I think the file name and controller / function names are correlated since I got many errors while trying to get this work, and it seemed like the file name and function names must be right.<br>This might be a mistake, so I’ll try to update if it turns out differently.</p>
+<h4 id="Unresolved-Issues-trying-to-find-out"><a href="#Unresolved-Issues-trying-to-find-out" class="headerlink" title="Unresolved Issues (trying to find out)"></a>Unresolved Issues (trying to find out)</h4><ul>
+<li>I am having issues (or this might not be an issue) with cache. From the beginning, when I was trying to see if my page has changed after changing some parts in <code>index.html.twig</code>, it didn’t change.<br>Newly added controller wasn’t recognized too, until I did this:<blockquote>
+<p>php bin/console cache:clear –no-warmup –env=prod</p>
+</blockquote>
+</li>
+</ul>
+<p>I’m not sure if this is something that I must do every time I do some changes. There might be some way, so I’ll keep on searching.</p>
+<ul>
+<li><p>Debugging<br>It said debugging toolbar should show up, but I haven’t seen it yet :(<br>I think I might have set up something wrong, and trying to figure this out.<br><strong>update!</strong><br>==&gt; I found this out. My website seems like it’s on a production mode instead of development mode. I accessed app_dev.php by explicitly using its url, and the bar showed up.<br>I think this is because of my web server setting, which is not the built-in php server. I’ll have to check up a bit more.</p>
+</li>
+<li><p>Dev &amp; Prod<br>I think Symfony divides these two quite strictly. I’m still trying to find out the exact mechanism, but there are two files -<code>app.php</code> and <code>app_dev.php</code>. While I was setting up <code>nginx.conf</code>, it also separated these two environments, which is good. But I should take more in-depth look to see exact settings and usages.</p>
+</li>
+<li><p>Memory issue<br>While I was trying to install FOS\rest-bundle, I encountered memory issue. Allocated memory exceeded, so I tried to increase the <code>memory_limit</code> parameter in <code>php.ini</code> file to 1G, but it didn’t work.<br>I though there might be another issue, but today I tried it again by putting <code>-1</code> as its value. As a result, the memory alert was gone but now I had allocation exception in <code>Composer</code>. This was solved after I entered few commands suggested <a href="https://getcomposer.org/doc/articles/troubleshooting.md#proc-open-fork-failed-errors" target="_blank" rel="external">here</a></p>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/10/08/symfony-review-1/" data-id="cj8ilhhpu0004iouaxfrmceah" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
 
                         </div>
@@ -197,6 +301,29 @@ Urls are made out of protocol part and resource
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/10/08/symfony-review-2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Symfony Review-2
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/10/08/bem-2/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">BEM Introduction-2</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -329,11 +456,13 @@ Urls are made out of protocol part and resource
     var disqus_shortname = 'jiwonyeom';
     
     
+    var disqus_url = 'http://yoursite.com/2017/10/08/symfony-review-1/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
