@@ -13,11 +13,11 @@
 <meta name="keywords" content="HTML,CSS,BEM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BEM Introduction-2">
-<meta property="og:url" content="http://yoursite.com/2017/10/08/bem-2/index.html">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/08/bem-2/index.html">
 <meta property="og:site_name" content="Code Jingles">
 <meta property="og:description" content="BEM - File Structure, naming conventions and CSS1. File Structure Single block = single directory. Block and directory shares name. block’s implementation is divided into separate technology files (cs">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-08T10:11:44.506Z">
+<meta property="og:updated_time" content="2017-10-08T10:57:15.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BEM Introduction-2">
 <meta name="twitter:description" content="BEM - File Structure, naming conventions and CSS1. File Structure Single block = single directory. Block and directory shares name. block’s implementation is divided into separate technology files (cs">
@@ -178,8 +178,8 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;!-- &apos;profile&apos; block --&gt;</div><div class="line">&lt;section class=&quot;profile&quot;&gt;</div><div class="line">    &lt;div class=&quot;organization profile__organization&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;photobox profile__photobox&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.profile__organization &#123;</div><div class="line">    padding-top: 20px;</div><div class="line">&#125;</div><div class="line">.profile__photobox &#123;</div><div class="line">    padding-top: 10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 'profile' block --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"profile"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"organization profile__organization"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"photobox profile__photobox"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.profile__organization</span> &#123;</div><div class="line">    <span class="attribute">padding-top</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.profile__photobox</span> &#123;</div><div class="line">    <span class="attribute">padding-top</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <p>+Paddings/margins to top / to bottom is often defined since it is not affected by responsiveness to a great degree, but horizontal padding / margin should be rethought before use.</p>
 </blockquote>
@@ -190,7 +190,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/10/08/bem-2/" data-id="cj8ilhhpe0000ioua7g2xtgl0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://JiwonYeom.github.io/2017/10/08/bem-2/" data-id="cj8im8u4r0009xouaymdocrr1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -327,6 +327,15 @@
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/10/08/GithubPages-Hexo/" class="title">Github Pages With Hexo</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T10:36:03.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
                             <p class="item-title"><a href="/2017/10/08/symfony-review-2/" class="title">Symfony Review-2</a></p>
                             <p class="item-date"><time datetime="2017-10-08T10:16:05.000Z" itemprop="datePublished">2017-10-08</time></p>
@@ -360,15 +369,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Network/">Network</a></p>
-                            <p class="item-title"><a href="/2017/10/08/Domain-DNS/" class="title">Domain &amp; DNS</a></p>
-                            <p class="item-date"><time datetime="2017-10-08T09:46:01.000Z" itemprop="datePublished">2017-10-08</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -388,7 +388,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -398,7 +398,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/">BEM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Beginner/">Beginner</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/">Domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Symfony/">Symfony</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/">BEM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Beginner/">Beginner</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/">Domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Symfony/">Symfony</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -446,7 +446,7 @@
     var disqus_shortname = 'jiwonyeom';
     
     
-    var disqus_url = 'http://yoursite.com/2017/10/08/bem-2/';
+    var disqus_url = 'http://JiwonYeom.github.io/2017/10/08/bem-2/';
     
     (function() {
     var dsq = document.createElement('script');

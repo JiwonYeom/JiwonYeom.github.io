@@ -3,24 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>BEM Introduction-1 | Code Jingles</title>
+    <title>Github Pages With Hexo | Code Jingles</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="HTML,CSS,BEM" />
+        <meta name="keywords" content="Hexo,Blog" />
     
-    <meta name="description" content="BEM - Key ConceptsReference to here  Component-based approach to web development divide UI into blocks easier interface development reusable code without copy &amp;amp; pasting  1. Block Represented by CL">
-<meta name="keywords" content="HTML,CSS,BEM">
+    <meta name="description" content="Get your Github Pages Looking Fancy with HexoAfter around 2 full months of keeping up TIL repository, I’ve FINALLY managed to move on to Github Pages. There were several thresholds for me before, whic">
+<meta name="keywords" content="Hexo,Blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BEM Introduction-1">
-<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/08/bem-1/index.html">
+<meta property="og:title" content="Github Pages With Hexo">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="BEM - Key ConceptsReference to here  Component-based approach to web development divide UI into blocks easier interface development reusable code without copy &amp;amp; pasting  1. Block Represented by CL">
+<meta property="og:description" content="Get your Github Pages Looking Fancy with HexoAfter around 2 full months of keeping up TIL repository, I’ve FINALLY managed to move on to Github Pages. There were several thresholds for me before, whic">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-08T10:57:26.776Z">
+<meta property="og:updated_time" content="2017-10-08T11:24:32.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BEM Introduction-1">
-<meta name="twitter:description" content="BEM - Key ConceptsReference to here  Component-based approach to web development divide UI into blocks easier interface development reusable code without copy &amp;amp; pasting  1. Block Represented by CL">
+<meta name="twitter:title" content="Github Pages With Hexo">
+<meta name="twitter:description" content="Get your Github Pages Looking Fancy with HexoAfter around 2 full months of keeping up TIL repository, I’ve FINALLY managed to move on to Github Pages. There were several thresholds for me before, whic">
     
 
     <!-- add font for custom -->
@@ -124,18 +124,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/HTML-CSS/">HTML&CSS</a>
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-bem-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-GithubPages-Hexo" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        BEM Introduction-1
+        Github Pages With Hexo
         </h1>
     
 
@@ -145,76 +145,58 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/10/08/bem-1/" class="article-date">
-            <time datetime="2017-10-08T10:00:01.000Z" itemprop="datePublished">2017-10-08</time>
+        <a href="/2017/10/08/GithubPages-Hexo/" class="article-date">
+            <time datetime="2017-10-08T10:36:03.000Z" itemprop="datePublished">2017-10-08</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/BEM/">BEM</a>, <a class="tag-link" href="/tags/CSS/">CSS</a>, <a class="tag-link" href="/tags/HTML/">HTML</a>
+        <a class="tag-link" href="/tags/Blog/">Blog</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="BEM-Key-Concepts"><a href="#BEM-Key-Concepts" class="headerlink" title="BEM - Key Concepts"></a>BEM - Key Concepts</h1><p>Reference to <a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="external">here</a></p>
-<ul>
-<li>Component-based approach to web development</li>
-<li>divide UI into blocks</li>
-<li>easier interface development</li>
-<li>reusable code without copy &amp; pasting</li>
-</ul>
-<h5 id="1-Block"><a href="#1-Block" class="headerlink" title="1. Block"></a>1. Block</h5><ul>
-<li><strong>Represented by CLASS attribute</strong></li>
-<li><strong>name describes its PURPOSE</strong></li>
-<li>Component</li>
-<li>encapsulates behaviors, templates, styles, etc.</li>
-<li>Should NOT influence the environment. <strong>Do not set margin, padding, postion, etc.</strong></li>
-<li><strong>No CSS tag / ID selectors.</strong></li>
-<li><em>Nested</em> structure.</li>
-<li><em>Arbitrary</em> placement : blocks should be able to move around the page without modifying CSS / JavaScript</li>
-<li>Reuse by creating <em>instances</em></li>
-</ul>
-<h5 id="2-Element"><a href="#2-Element" class="headerlink" title="2. Element"></a>2. Element</h5><ul>
-<li><strong>name describes its PURPOSE</strong></li>
-<li><p><strong>naming rule: <code>block-name__element-name</code>.</strong></p>
-</li>
-<li><p>NESTING : Even if they are nested, they are all <strong>part of a BLOCK</strong>, not an ELEMENT. (<code>block-name_elment-name__element-name</code> &lt;= not allowed). If this is needed (elements under element), use service block instead.</p>
-</li>
-<li>MEMBERSHIP : element is ALWAYS a part of a block.</li>
-<li>Optional</li>
-</ul>
-<h5 id="3-Modifier"><a href="#3-Modifier" class="headerlink" title="3. Modifier"></a>3. Modifier</h5><ul>
-<li>Describes its <strong>APPEARANCE</strong>, <strong>STATE</strong>, and <strong>BEHAVIOR</strong>.</li>
-<li><strong>Separated from block / element name by a single _.</strong></li>
-<li><strong>Cannot be used alone. Use it alongside block / element class</strong></li>
-<li><p><strong>Types:</strong></p>
-<ul>
-<li>Boolean: when presence / absence of modifier is important &amp; value unimportant.</li>
-<li>Key-value: when modifier value is important.</li>
-</ul>
-</li>
-<li><p>Defines appearance and behavior of a block / an element.</p>
-</li>
-<li>optional</li>
-<li>Similar to HTML attr</li>
-<li>can change during runtime</li>
-</ul>
-<h5 id="4-BEM-entity"><a href="#4-BEM-entity" class="headerlink" title="4. BEM entity"></a>4. BEM entity</h5><ul>
-<li>Blocks, elements, and modifiers</li>
-</ul>
-<h5 id="5-Mix"><a href="#5-Mix" class="headerlink" title="5. Mix"></a>5. Mix</h5><ul>
-<li>An instance of different BEM entities on a single DOM node.</li>
-<li>combines behaviors &amp; styles of several entities without code duplication</li>
-<li>create semantically new interface component on the basis of existing entities.<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- mix of block 'search-form' and element 'header__search-form' --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search-form header__search-form"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="6-BEM-tree"><a href="#6-BEM-tree" class="headerlink" title="6. BEM tree"></a>6. BEM tree</h5><ul>
-<li>DOM tree written in BEM entities</li>
-</ul>
+            <h2 id="Get-your-Github-Pages-Looking-Fancy-with-Hexo"><a href="#Get-your-Github-Pages-Looking-Fancy-with-Hexo" class="headerlink" title="Get your Github Pages Looking Fancy with Hexo"></a>Get your Github Pages Looking Fancy with Hexo</h2><p>After around 2 full months of keeping up TIL repository, I’ve FINALLY managed to move on to Github Pages.</p>
+<p>There were several thresholds for me before, which were </p>
+<ol>
+<li>I was not used to Markdowns.</li>
+<li>I had troubles understanding how Github Pages hosts my blog built on Hexo.</li>
+</ol>
+<p>I know these might sound strange, but yeah I guess I didn’t have enough knowledge on how things work on web in terms of build-deploy processes.<br>So here goes som explanations for those of you who are starting off with <code>Github Pages</code>+<code>Hexo</code></p>
+<h4 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h4><p>This is super simple. Just create a repository with the name of <code>[your-username].github.io</code>. After that, just move on with <code>Hexo</code> set up.</p>
+<h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a></h4><p>This is an awesome tool that automatically sets up your Github Pages to work like a blog with Markdown files as postings.</p>
+<p>Initial set up comes with simple commands:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// install hexo</div><div class="line">npm install hexo-cli -g</div><div class="line">// init your blog. <span class="string">'blog'</span> here is just a name, so you can change it.</div><div class="line">hexo init blog</div><div class="line">// get into your blog directory</div><div class="line"><span class="built_in">cd</span> blog</div><div class="line">// install bundles</div><div class="line">npm install</div><div class="line">// run your blog on node server, <span class="built_in">which</span> will run on http://localhost:4000</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>Now when you can confirm it running on <code>localhost</code>, continue with settings.<br>You can see settings in <code>_config.yml</code>.<br>You have to change some variables here. Here’s sample for what I customized:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: Code Jingles</div><div class="line">subtitle:</div><div class="line">description:</div><div class="line">author: Jiwon</div><div class="line">language: en</div><div class="line">timezone: Asia/Seoul</div></pre></td></tr></table></figure>
+<p>You also need to set <code>Theme</code> and <code>Deploy</code>, but I’ll get back to it later.</p>
+<p>Now go ahead and find some theme that you’d like to use from Hexo’s <a href="https://hexo.io/themes/index.html" target="_blank" rel="external">theme page</a>.<br>Usually, the themes will provide you sufficient directions to apply it.<br>For me, I chose <code>Hueman</code> and customized it a bit.<br>Mostly, it involves <code>git clone</code> command and changing <code>theme</code> in your <code>blog/_config.yml</code> file.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: hueman</div></pre></td></tr></table></figure>
+<p>After that, customize the theme as you like. For me, I even edited some part of style files and layout file so that I can use text instead of image for my logo. I chose one from google font (full of awesome fonts!).<br>I added my part of customization as <code>custom.styl</code> file, and imported it into <code>style.styl</code>. First time using Styl and it was interesting to try new stuff. Check it out <a href="https://github.com/tj/styl" target="_blank" rel="external">here</a>.</p>
+<p>When you are done, most important part now - create a first post!</p>
+<p>The command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [title]</div></pre></td></tr></table></figure></p>
+<p>Please refert to official <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Docs</a> for full explanation. This command will create new <code>.md</code> file in your <code>blog/source/_posts</code> directory. You just have to write things in that file.</p>
+<p>Most important part - how to make this <code>markdown</code> file into a webpage? </p>
+<blockquote>
+<p>These markdowns are not directly taken into your website - it will not look all pretty and nice in markdown format.</p>
+</blockquote>
+<p>You need to convert it into HTML file. But how?<br><code>Hexo</code> does it.</p>
+<p>Two important commands:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>First command will turn your added files and assets needed for your blog into static files. For example, your <code>markdown</code> file will be turned into <code>html</code> file so that it will look nice and organized for visitors of your blog.<br>This includes files like css, js.. etc.<br>Please refer <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">here</a> for further understanding in <code>generate</code> command.</p>
+<blockquote>
+<p>You can always check changes to your blog by <code>hexo server</code> command before actually generating the files.</p>
+</blockquote>
+<p>Finally, that you are done with static files, you need to <code>push</code> them to your web server - which is your <code>github</code> repository.</p>
+<p>You don’t do this with your usual <code>git push</code> kind of method. Hexo does this for you too. With <code>hexo deploy</code>, it will automatically push the changes into your repository.</p>
+<p>But you need to set up <code>deploy</code> methods first in your <code>blog/_config.yml</code> file.<br>I’ll show you how to set it up with <code>Github</code>, but it supports other services too. Please see <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">here</a>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> blog</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>Then in your <code>_.config.yml</code>,</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: [branch]      # This is usually 'master' unless you changed branch</div><div class="line">  message: [message]    # I excluded this option</div></pre></td></tr></table></figure>
+<p>If you have set everything correctly, it should deploy your blog to Github Pages automatically and generate the blog.<br>This may take few moments to actually be observable, so please be patient :)</p>
+<p>And that’s it!<br>It’s simple but could be difficult for those who are not used to web deployment and markdowns. Hopefully this helps for those who’s struggling with <code>Hexo</code>.</p>
 
         </div>
         <footer class="article-footer">
@@ -222,7 +204,7 @@
 
 
 
-    <a data-url="http://JiwonYeom.github.io/2017/10/08/bem-1/" data-id="cj8im8u490001xouawec3jewy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/" data-id="cj8im8u4j0005xoua7iew1t1b" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -327,20 +309,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/10/08/bem-2/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            BEM Introduction-2
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/10/08/Domain-DNS/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/10/08/symfony-review-2/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Domain &amp; DNS</p>
+        <p class="article-nav-title">Symfony Review-2</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -478,7 +450,7 @@
     var disqus_shortname = 'jiwonyeom';
     
     
-    var disqus_url = 'http://JiwonYeom.github.io/2017/10/08/bem-1/';
+    var disqus_url = 'http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/';
     
     (function() {
     var dsq = document.createElement('script');

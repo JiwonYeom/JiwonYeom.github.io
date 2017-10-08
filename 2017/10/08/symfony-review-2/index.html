@@ -13,11 +13,11 @@
 <meta name="keywords" content="Symfony,PHP,Framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Symfony Review-2">
-<meta property="og:url" content="http://yoursite.com/2017/10/08/symfony-review-2/index.html">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/08/symfony-review-2/index.html">
 <meta property="og:site_name" content="Code Jingles">
 <meta property="og:description" content="Reviews on Trying out Symfony(2)DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema th">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-08T10:17:21.920Z">
+<meta property="og:updated_time" content="2017-10-08T10:58:01.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Symfony Review-2">
 <meta name="twitter:description" content="Reviews on Trying out Symfony(2)DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema th">
@@ -162,7 +162,7 @@
         <div class="article-entry" itemprop="articleBody">
             <h2 id="Reviews-on-Trying-out-Symfony-2"><a href="#Reviews-on-Trying-out-Symfony-2" class="headerlink" title="Reviews on Trying out Symfony(2)"></a>Reviews on Trying out Symfony(2)</h2><h4 id="Doctrine"><a href="#Doctrine" class="headerlink" title="Doctrine"></a>Doctrine</h4><p>Symfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.<br>Doctrine allows building database schema through <code>Entity Class</code>, retrieving it, and more.<br>Symfony commands through bin/console can connect to various functionalities of Doctrine.</p>
 <h4 id="Trailing-Problem"><a href="#Trailing-Problem" class="headerlink" title="Trailing \ Problem"></a>Trailing <code>\</code> Problem</h4><p>Symfony routing will cause <code>401</code> error when there is a trailing slash in the url. To solve it, you should add additional controller for redirections as shown <a href="https://symfony.com/doc/current/routing/redirect_trailing_slash.html" target="_blank" rel="external">here</a>.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// src/AppBundle/Controller/RedirectingController.php</div><div class="line">namespace AppBundle\Controller;</div><div class="line"></div><div class="line">use Symfony\Bundle\FrameworkBundle\Controller\Controller;</div><div class="line">use Symfony\Component\HttpFoundation\Request;</div><div class="line"></div><div class="line">class RedirectingController extends Controller</div><div class="line">&#123;</div><div class="line">    public function removeTrailingSlashAction(Request $request)</div><div class="line">    &#123;</div><div class="line">        $pathInfo = $request-&gt;getPathInfo();</div><div class="line">        $requestUri = $request-&gt;getRequestUri();</div><div class="line"></div><div class="line">        $url = str_replace($pathInfo, rtrim($pathInfo, &apos; /&apos;), $requestUri);</div><div class="line"></div><div class="line">        return $this-&gt;redirect($url, 301);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// src/AppBundle/Controller/RedirectingController.php</span></div><div class="line"><span class="keyword">namespace</span> <span class="title">AppBundle</span>\<span class="title">Controller</span>;</div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Bundle</span>\<span class="title">FrameworkBundle</span>\<span class="title">Controller</span>\<span class="title">Controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Component</span>\<span class="title">HttpFoundation</span>\<span class="title">Request</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RedirectingController</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">removeTrailingSlashAction</span><span class="params">(Request $request)</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $pathInfo = $request-&gt;getPathInfo();</div><div class="line">        $requestUri = $request-&gt;getRequestUri();</div><div class="line"></div><div class="line">        $url = str_replace($pathInfo, rtrim($pathInfo, <span class="string">' /'</span>), $requestUri);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;redirect($url, <span class="number">301</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -170,7 +170,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2017/10/08/symfony-review-2/" data-id="cj8ilhhpw0005ioua7lfr1oau" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://JiwonYeom.github.io/2017/10/08/symfony-review-2/" data-id="cj8im8u4u000axouagi5w0ykb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -275,6 +275,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2017/10/08/GithubPages-Hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Github Pages With Hexo
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2017/10/08/symfony-review-1/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -293,6 +303,15 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/10/08/GithubPages-Hexo/" class="title">Github Pages With Hexo</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T10:36:03.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -330,15 +349,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Network/">Network</a></p>
-                            <p class="item-title"><a href="/2017/10/08/Domain-DNS/" class="title">Domain &amp; DNS</a></p>
-                            <p class="item-date"><time datetime="2017-10-08T09:46:01.000Z" itemprop="datePublished">2017-10-08</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -358,7 +368,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -368,7 +378,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/">BEM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Beginner/">Beginner</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/">Domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Symfony/">Symfony</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BEM/">BEM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Beginner/">Beginner</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/">Domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Symfony/">Symfony</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -416,7 +426,7 @@
     var disqus_shortname = 'jiwonyeom';
     
     
-    var disqus_url = 'http://yoursite.com/2017/10/08/symfony-review-2/';
+    var disqus_url = 'http://JiwonYeom.github.io/2017/10/08/symfony-review-2/';
     
     (function() {
     var dsq = document.createElement('script');
