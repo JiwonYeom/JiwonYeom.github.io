@@ -1829,46 +1829,58 @@ i.icon:before {
   height: 1.6em;
 }
 .highlight {
-  color: #a9b7c6;
-  background: #282b2e;
-}
-.highlight .code .number,
-.highlight .code .literal,
-.highlight .code .symbol,
-.highlight .code .bullet {
-  color: #6897bb;
-}
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .deletion {
-  color: #cc7832;
-}
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .link {
-  color: #629755;
+  color: #dccf8f;
+  background: url("./pojoaque.jpg") repeat scroll left top #181914;
 }
 .highlight .code .comment,
 .highlight .code .quote {
-  color: #808080;
+  color: #586e75;
+  font-style: italic;
 }
-.highlight .code .meta {
-  color: #bbb529;
-}
-.highlight .code .string,
-.highlight .code .attribute,
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .literal,
 .highlight .code .addition {
-  color: #6a8759;
+  color: #b64926;
 }
-.highlight .code .section,
+.highlight .code .number,
+.highlight .code .string,
+.highlight .code .doctag,
+.highlight .code .regexp {
+  color: #468966;
+}
 .highlight .code .title,
-.highlight .code .type {
-  color: #ffc66d;
+.highlight .code .section,
+.highlight .code .built_in,
+.highlight .code .name {
+  color: #ffb03b;
 }
-.highlight .code .name,
+.highlight .code .variable,
+.highlight .code .template-variable,
+.highlight .code .class .title,
+.highlight .code .type,
+.highlight .code .tag {
+  color: #b58900;
+}
+.highlight .code .attribute {
+  color: #b89859;
+}
+.highlight .code .symbol,
+.highlight .code .bullet,
+.highlight .code .link,
+.highlight .code .subst,
+.highlight .code .meta {
+  color: #cb4b16;
+}
+.highlight .code .deletion {
+  color: #dc322f;
+}
 .highlight .code .selector-id,
 .highlight .code .selector-class {
-  color: #e8bf6a;
+  color: #d3a60c;
+}
+.highlight .code .formula {
+  background: #073642;
 }
 .highlight .code .emphasis {
   font-style: italic;
