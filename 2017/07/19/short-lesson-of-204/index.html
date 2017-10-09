@@ -19,18 +19,18 @@
     
         <meta name="keywords" content="HTTP" />
     
-    <meta name="description" content="Short Lesson on 204 ResponseToday it happened to me that between REST API and client, response body came back empty even if it was set from REST API server. We spent good 1 hour trying to solve this,">
+    <meta name="description" content="Today it happened to me that between REST API and client, response body came back empty even if it was set from REST API server. We spent good 1 hour trying to solve this, and it turned out it was bec">
 <meta name="keywords" content="HTTP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Short Lesson on 204 Response">
 <meta property="og:url" content="http://JiwonYeom.github.io/2017/07/19/short-lesson-of-204/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Short Lesson on 204 ResponseToday it happened to me that between REST API and client, response body came back empty even if it was set from REST API server. We spent good 1 hour trying to solve this,">
+<meta property="og:description" content="Today it happened to me that between REST API and client, response body came back empty even if it was set from REST API server. We spent good 1 hour trying to solve this, and it turned out it was bec">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:23:42.318Z">
+<meta property="og:updated_time" content="2017-10-09T01:48:35.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Short Lesson on 204 Response">
-<meta name="twitter:description" content="Short Lesson on 204 ResponseToday it happened to me that between REST API and client, response body came back empty even if it was set from REST API server. We spent good 1 hour trying to solve this,">
+<meta name="twitter:description" content="Today it happened to me that between REST API and client, response body came back empty even if it was set from REST API server. We spent good 1 hour trying to solve this, and it turned out it was bec">
     
 
     <!-- add font for custom -->
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="Short-Lesson-on-204-Response"><a href="#Short-Lesson-on-204-Response" class="headerlink" title="Short Lesson on 204 Response"></a>Short Lesson on 204 Response</h2><p>Today it happened to me that between REST API and client, response body came back empty even if it was set from REST API server.</p>
+            <p>Today it happened to me that between REST API and client, response body came back empty even if it was set from REST API server.</p>
 <p>We spent good 1 hour trying to solve this, and it turned out it was because of <code>204</code> response status.</p>
 <p><code>204 status</code> means the request was accepted and processed well, but <code>no content</code> is returned. It is in the series of 2xx, which is basically an okay sign.</p>
 <p>Funny thing was, the message set from REST API server (which returned the <code>204</code> response) was well received when tested on <a href="https://www.getpostman.com/apps" target="_blank" rel="external">Postman</a>.</p>

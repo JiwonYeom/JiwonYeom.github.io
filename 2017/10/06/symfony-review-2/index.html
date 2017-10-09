@@ -19,18 +19,18 @@
     
         <meta name="keywords" content="PHP,Symfony,Framework" />
     
-    <meta name="description" content="Reviews on Trying out Symfony(2)DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema th">
+    <meta name="description" content="DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema through Entity Class, retrieving i">
 <meta name="keywords" content="PHP,Symfony,Framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Symfony Review-2">
 <meta property="og:url" content="http://JiwonYeom.github.io/2017/10/06/symfony-review-2/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Reviews on Trying out Symfony(2)DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema th">
+<meta property="og:description" content="DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema through Entity Class, retrieving i">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:24:21.014Z">
+<meta property="og:updated_time" content="2017-10-09T01:48:43.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Symfony Review-2">
-<meta name="twitter:description" content="Reviews on Trying out Symfony(2)DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema th">
+<meta name="twitter:description" content="DoctrineSymfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.Doctrine allows building database schema through Entity Class, retrieving i">
     
 
     <!-- add font for custom -->
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="Reviews-on-Trying-out-Symfony-2"><a href="#Reviews-on-Trying-out-Symfony-2" class="headerlink" title="Reviews on Trying out Symfony(2)"></a>Reviews on Trying out Symfony(2)</h2><h4 id="Doctrine"><a href="#Doctrine" class="headerlink" title="Doctrine"></a>Doctrine</h4><p>Symfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.<br>Doctrine allows building database schema through <code>Entity Class</code>, retrieving it, and more.<br>Symfony commands through bin/console can connect to various functionalities of Doctrine.</p>
+            <h4 id="Doctrine"><a href="#Doctrine" class="headerlink" title="Doctrine"></a>Doctrine</h4><p>Symfony does not have core component that works with Databases. Instead, it uses third-party library called Doctrine.<br>Doctrine allows building database schema through <code>Entity Class</code>, retrieving it, and more.<br>Symfony commands through bin/console can connect to various functionalities of Doctrine.</p>
 <h4 id="Trailing-Problem"><a href="#Trailing-Problem" class="headerlink" title="Trailing \ Problem"></a>Trailing <code>\</code> Problem</h4><p>Symfony routing will cause <code>401</code> error when there is a trailing slash in the url. To solve it, you should add additional controller for redirections as shown <a href="https://symfony.com/doc/current/routing/redirect_trailing_slash.html" target="_blank" rel="external">here</a>.</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// src/AppBundle/Controller/RedirectingController.php</span></div><div class="line"><span class="keyword">namespace</span> <span class="title">AppBundle</span>\<span class="title">Controller</span>;</div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Bundle</span>\<span class="title">FrameworkBundle</span>\<span class="title">Controller</span>\<span class="title">Controller</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Component</span>\<span class="title">HttpFoundation</span>\<span class="title">Request</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RedirectingController</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">removeTrailingSlashAction</span><span class="params">(Request $request)</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $pathInfo = $request-&gt;getPathInfo();</div><div class="line">        $requestUri = $request-&gt;getRequestUri();</div><div class="line"></div><div class="line">        $url = str_replace($pathInfo, rtrim($pathInfo, <span class="string">' /'</span>), $requestUri);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;redirect($url, <span class="number">301</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 

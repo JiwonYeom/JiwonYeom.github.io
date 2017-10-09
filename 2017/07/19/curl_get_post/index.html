@@ -19,18 +19,18 @@
     
         <meta name="keywords" content="PHP,CURL" />
     
-    <meta name="description" content="GET and POST in PHP curl - basicsBasicscurl in PHP basically does the same thing as curl in different languages or environments, but php has its own way of using it. It is not too difficult though.Her">
+    <meta name="description" content="Basicscurl in PHP basically does the same thing as curl in different languages or environments, but php has its own way of using it. It is not too difficult though.Here are basic codes I used when I w">
 <meta name="keywords" content="PHP,CURL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CURL in PHP">
 <meta property="og:url" content="http://JiwonYeom.github.io/2017/07/19/curl_get_post/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="GET and POST in PHP curl - basicsBasicscurl in PHP basically does the same thing as curl in different languages or environments, but php has its own way of using it. It is not too difficult though.Her">
+<meta property="og:description" content="Basicscurl in PHP basically does the same thing as curl in different languages or environments, but php has its own way of using it. It is not too difficult though.Here are basic codes I used when I w">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:33:33.509Z">
+<meta property="og:updated_time" content="2017-10-09T01:46:59.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CURL in PHP">
-<meta name="twitter:description" content="GET and POST in PHP curl - basicsBasicscurl in PHP basically does the same thing as curl in different languages or environments, but php has its own way of using it. It is not too difficult though.Her">
+<meta name="twitter:description" content="Basicscurl in PHP basically does the same thing as curl in different languages or environments, but php has its own way of using it. It is not too difficult though.Here are basic codes I used when I w">
     
 
     <!-- add font for custom -->
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="GET-and-POST-in-PHP-curl-basics"><a href="#GET-and-POST-in-PHP-curl-basics" class="headerlink" title="GET and POST in PHP curl - basics"></a>GET and POST in PHP curl - basics</h1><h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p><code>curl</code> in PHP basically does the same thing as <code>curl</code> in different languages or environments, but <code>php</code> has its own way of using it. It is not too difficult though.<br>Here are basic codes I used when I was working on <code>GET</code> and <code>POST</code> request.</p>
+            <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p><code>curl</code> in PHP basically does the same thing as <code>curl</code> in different languages or environments, but <code>php</code> has its own way of using it. It is not too difficult though.<br>Here are basic codes I used when I was working on <code>GET</code> and <code>POST</code> request.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ch = curl_init();</div><div class="line">curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  // sets return value of executed curl transfer as a string instead of direct output</div><div class="line"></div><div class="line">curl_exec($ch);</div><div class="line">curl_close($ch);</div></pre></td></tr></table></figure>
 <ul>
 <li><code>curl_init()</code> : initialize your curl transfer</li>

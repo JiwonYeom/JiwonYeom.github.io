@@ -19,18 +19,18 @@
     
         <meta name="keywords" content="PHP,Server,NGINX" />
     
-    <meta name="description" content="NGINX and PHP settingsNGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with inst">
+    <meta name="description" content="NGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with installing php and php-fpm">
 <meta name="keywords" content="PHP,Server,NGINX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NGINX and PHP Settings">
 <meta property="og:url" content="http://JiwonYeom.github.io/2017/07/19/nginx-and-php/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="NGINX and PHP settingsNGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with inst">
+<meta property="og:description" content="NGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with installing php and php-fpm">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:30:35.578Z">
+<meta property="og:updated_time" content="2017-10-09T01:48:25.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NGINX and PHP Settings">
-<meta name="twitter:description" content="NGINX and PHP settingsNGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with inst">
+<meta name="twitter:description" content="NGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with installing php and php-fpm">
     
 
     <!-- add font for custom -->
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="NGINX-and-PHP-settings"><a href="#NGINX-and-PHP-settings" class="headerlink" title="NGINX and PHP settings"></a>NGINX and PHP settings</h1><p>NGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with installing php and php-fpm. (CentOS-base)</p>
+            <p>NGINX by itself does not provide PHP support. In order to make it work smoothly with PHP, additional implementation, which is PHP-FPM. When first installed NGINX, begin with installing php and php-fpm. (CentOS-base)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum install php php-mysql php-fpm</div></pre></td></tr></table></figure>
 <p>One thing to note here is that, if you are to add external repository to install newer version of php like php-7, you should take note that you must use it carefully so that php version can be tracked and updated consistently.</p>
 <p>After that, you should set up some config files, which are <code>nginx.conf</code>, <code>php-fpm.d/www.conf</code>, and <code>php.ini</code>.</p>

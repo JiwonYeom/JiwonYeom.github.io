@@ -19,18 +19,18 @@
     
         <meta name="keywords" content="JavaScript" />
     
-    <meta name="description" content="Using new Date() in IE/SafariIt came across to me today that the new Date() worked differently in chrome and other browsers, namely IE and Safari. This is what happened:12345var date = new Date(&apos;2017-">
+    <meta name="description" content="It came across to me today that the new Date() worked differently in chrome and other browsers, namely IE and Safari. This is what happened:12345var date = new Date(&apos;2017-08-01 00:00&apos;);// in chrome =&amp;">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Date in IE">
 <meta property="og:url" content="http://JiwonYeom.github.io/2017/08/05/date-in-ie/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Using new Date() in IE/SafariIt came across to me today that the new Date() worked differently in chrome and other browsers, namely IE and Safari. This is what happened:12345var date = new Date(&apos;2017-">
+<meta property="og:description" content="It came across to me today that the new Date() worked differently in chrome and other browsers, namely IE and Safari. This is what happened:12345var date = new Date(&apos;2017-08-01 00:00&apos;);// in chrome =&amp;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:20:53.587Z">
+<meta property="og:updated_time" content="2017-10-09T01:47:06.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Date in IE">
-<meta name="twitter:description" content="Using new Date() in IE/SafariIt came across to me today that the new Date() worked differently in chrome and other browsers, namely IE and Safari. This is what happened:12345var date = new Date(&apos;2017-">
+<meta name="twitter:description" content="It came across to me today that the new Date() worked differently in chrome and other browsers, namely IE and Safari. This is what happened:12345var date = new Date(&apos;2017-08-01 00:00&apos;);// in chrome =&amp;">
     
 
     <!-- add font for custom -->
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Using-new-Date-in-IE-Safari"><a href="#Using-new-Date-in-IE-Safari" class="headerlink" title="Using new Date() in IE/Safari"></a>Using <code>new Date()</code> in IE/Safari</h1><p>It came across to me today that the <code>new Date()</code> worked differently in chrome and other browsers, namely IE and Safari.</p>
+            <p>It came across to me today that the <code>new Date()</code> worked differently in chrome and other browsers, namely IE and Safari.</p>
 <p>This is what happened:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2017-08-01 00:00'</span>);</div><div class="line"></div><div class="line"><span class="comment">// in chrome =&gt; successfully converted to date</span></div><div class="line"></div><div class="line"><span class="comment">// in IE / safari =&gt; invalid date</span></div></pre></td></tr></table></figure></p>
 <p>According to <a href="https://stackoverflow.com/questions/13091523/javascript-invalid-date-error-in-internet-explorer" target="_blank" rel="external">this</a> page here, string given to date constructor must be RFC2822 or ISO8601 format.<br>Chrome converted it for me, but These two browsers didn’t, so this is what I did to solve it:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> input = <span class="string">'2017-08-01 00:00'</span>;</div><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(moment(input).format());</div></pre></td></tr></table></figure>

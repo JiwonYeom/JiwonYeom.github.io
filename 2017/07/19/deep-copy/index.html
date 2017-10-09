@@ -19,18 +19,18 @@
     
         <meta name="keywords" content="JavaScript" />
     
-    <meta name="description" content="Deep copy of an Object in JSWhen an object is put into another variable, it is copied by reference. This means if the original object changes, the referenced values will change too. 123456789101112131">
+    <meta name="description" content="When an object is put into another variable, it is copied by reference. This means if the original object changes, the referenced values will change too. 123456789101112131415var originalArr = [    &amp;#">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep Copy in JS">
 <meta property="og:url" content="http://JiwonYeom.github.io/2017/07/19/deep-copy/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Deep copy of an Object in JSWhen an object is put into another variable, it is copied by reference. This means if the original object changes, the referenced values will change too. 123456789101112131">
+<meta property="og:description" content="When an object is put into another variable, it is copied by reference. This means if the original object changes, the referenced values will change too. 123456789101112131415var originalArr = [    &amp;#">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:21:07.742Z">
+<meta property="og:updated_time" content="2017-10-09T01:47:10.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deep Copy in JS">
-<meta name="twitter:description" content="Deep copy of an Object in JSWhen an object is put into another variable, it is copied by reference. This means if the original object changes, the referenced values will change too. 123456789101112131">
+<meta name="twitter:description" content="When an object is put into another variable, it is copied by reference. This means if the original object changes, the referenced values will change too. 123456789101112131415var originalArr = [    &amp;#">
     
 
     <!-- add font for custom -->
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Deep-copy-of-an-Object-in-JS"><a href="#Deep-copy-of-an-Object-in-JS" class="headerlink" title="Deep copy of an Object in JS"></a>Deep copy of an Object in JS</h1><p>When an object is put into another variable, it is copied by <code>reference</code>. This means if the original object changes, the referenced values will change too.</p>
+            <p>When an object is put into another variable, it is copied by <code>reference</code>. This means if the original object changes, the referenced values will change too.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var originalArr = [</div><div class="line">    &#123;first:&apos;John&apos;, last:&apos;Smith&apos;&#125;,</div><div class="line">    &#123;first:&apos;Charles&apos;, last:&apos;Black&apos;&#125;</div><div class="line">  ];</div><div class="line">var array1 = [];</div><div class="line">var array2 = [];</div><div class="line"></div><div class="line">// shallow copy</div><div class="line">array1 = originalArr;</div><div class="line">array2 = originalArr;</div><div class="line"></div><div class="line">array1 = array1.splice(0,1);</div><div class="line"></div><div class="line">console.log(array1); // [&#123;first:&apos;Charles&apos;, last:&apos;Black&apos;&#125;]</div><div class="line">console.log(array2); // [&#123;first:&apos;Charles&apos;, last:&apos;Black&apos;&#125;]</div></pre></td></tr></table></figure>
 <p>As shown in example above, if copied by <code>reference</code>, removing an element in one array will result in removal in another variable.<br>So these values must be <strong>deeply copied</strong>, which means values must be copied by value not reference.<br>There are several ways to do this, but I solved this with a simple solution (This is not the most efficient one. It only shows how to make a deeply copied array)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i = 0 ; i &lt; originalArr.length ; i++)</div><div class="line">&#123;</div><div class="line">  array1.push(originalArr[i]);</div><div class="line">  array2.push(originalArr[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
