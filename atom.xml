@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Code Jingles</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://JiwonYeom.github.io/"/>
+  <updated>2017-10-09T01:47:43.395Z</updated>
+  <id>http://JiwonYeom.github.io/</id>
+  
+  <author>
+    <name>Jiwon</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Analytics on Hexo</title>
+    <link href="http://JiwonYeom.github.io/2017/10/09/google-analytics-on-hexo/"/>
+    <id>http://JiwonYeom.github.io/2017/10/09/google-analytics-on-hexo/</id>
+    <published>2017-10-09T00:39:41.000Z</published>
+    <updated>2017-10-09T01:47:43.395Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I’ve implemented &lt;code&gt;Google Analytics&lt;/code&gt; to my blog :)&lt;/p&gt;
+&lt;p&gt;I have always been interested in user(audience) analysis, and wanted
+        
+      
+    
+    </summary>
+    
+      <category term="Data Analysis" scheme="http://JiwonYeom.github.io/categories/Data-Analysis/"/>
+    
+    
+      <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
+    
+      <category term="Beginner" scheme="http://JiwonYeom.github.io/tags/Beginner/"/>
+    
+      <category term="Google Analytics" scheme="http://JiwonYeom.github.io/tags/Google-Analytics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Pages With Hexo</title>
+    <link href="http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/"/>
+    <id>http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/</id>
+    <published>2017-10-08T10:36:03.000Z</published>
+    <updated>2017-10-09T01:47:38.639Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;After around 2 full months of keeping up TIL repository, I’ve FINALLY managed to move on to Github Pages.&lt;/p&gt;
+&lt;p&gt;There were several
+        
+      
+    
+    </summary>
+    
+      <category term="Uncategorized" scheme="http://JiwonYeom.github.io/categories/Uncategorized/"/>
+    
+    
+      <category term="Hexo" scheme="http://JiwonYeom.github.io/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TIL to blog</title>
+    <link href="http://JiwonYeom.github.io/2017/10/08/TIL-to-blog/"/>
+    <id>http://JiwonYeom.github.io/2017/10/08/TIL-to-blog/</id>
+    <published>2017-10-08T09:24:20.000Z</published>
+    <updated>2017-10-09T01:48:54.586Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;So I am moving away from TIL repository to a blog, where I can just store random thoughts and code snippets.&lt;br&gt;I’ll still use Medium
+        
+      
+    
+    </summary>
+    
+      <category term="Uncategorized" scheme="http://JiwonYeom.github.io/categories/Uncategorized/"/>
+    
+    
+      <category term="blog" scheme="http://JiwonYeom.github.io/tags/blog/"/>
+    
+      <category term="TIL" scheme="http://JiwonYeom.github.io/tags/TIL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Symfony Review-2</title>
+    <link href="http://JiwonYeom.github.io/2017/10/06/symfony-review-2/"/>
+    <id>http://JiwonYeom.github.io/2017/10/06/symfony-review-2/</id>
+    <published>2017-10-06T10:16:05.000Z</published>
+    <updated>2017-10-09T01:48:43.856Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;Doctrine&quot;&gt;&lt;a href=&quot;#Doctrine&quot; class=&quot;headerlink&quot; title=&quot;Doctrine&quot;&gt;&lt;/a&gt;Doctrine&lt;/h4&gt;&lt;p&gt;Symfony does not have core component that
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
+    
+      <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
+    
+      <category term="Framework" scheme="http://JiwonYeom.github.io/tags/Framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Symfony Review-1</title>
+    <link href="http://JiwonYeom.github.io/2017/10/03/symfony-review-1/"/>
+    <id>http://JiwonYeom.github.io/2017/10/03/symfony-review-1/</id>
+    <published>2017-10-03T10:16:02.000Z</published>
+    <updated>2017-10-09T01:48:38.611Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I have been trying out Symfony today, and while I was working on it, I faced some difficulties and issues.&lt;br&gt;I decided to leave some
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
+    
+      <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
+    
+      <category term="Framework" scheme="http://JiwonYeom.github.io/tags/Framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Installing a Package</title>
+    <link href="http://JiwonYeom.github.io/2017/09/30/installing-package/"/>
+    <id>http://JiwonYeom.github.io/2017/09/30/installing-package/</id>
+    <published>2017-09-30T03:39:41.000Z</published>
+    <updated>2017-10-09T01:48:16.456Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Update existing software packages&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div
+        
+      
+    
+    </summary>
+    
+      <category term="Server" scheme="http://JiwonYeom.github.io/categories/Server/"/>
+    
+    
+      <category term="Server" scheme="http://JiwonYeom.github.io/tags/Server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codeigniter</title>
+    <link href="http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/"/>
+    <id>http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/</id>
+    <published>2017-09-30T02:23:41.000Z</published>
+    <updated>2017-10-09T01:46:41.131Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Recently I’ve been using Codeigniter, and here’s how to use or create CI library.&lt;/p&gt;
+&lt;h2 id=&quot;How-to-use-it&quot;&gt;&lt;a href=&quot;#How-to-use-it&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
+    
+      <category term="Codeigniter" scheme="http://JiwonYeom.github.io/tags/Codeigniter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jenkins</title>
+    <link href="http://JiwonYeom.github.io/2017/09/30/jenkins-intro/"/>
+    <id>http://JiwonYeom.github.io/2017/09/30/jenkins-intro/</id>
+    <published>2017-09-30T01:03:45.000Z</published>
+    <updated>2017-10-09T01:48:21.670Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;Keywords:&lt;br&gt; Continuous Integration, Hudson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Installed on a central build server to let
+        
+      
+    
+    </summary>
+    
+      <category term="DevOps" scheme="http://JiwonYeom.github.io/categories/DevOps/"/>
+    
+    
+      <category term="Jenkins" scheme="http://JiwonYeom.github.io/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Symfony on AWS Linux</title>
+    <link href="http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/"/>
+    <id>http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/</id>
+    <published>2017-09-22T09:23:41.000Z</published>
+    <updated>2017-10-09T01:48:30.380Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;This is a step by step write up for how to prepare your AWS Linux server environment for &lt;code&gt;Symfony&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Get your
+        
+      
+    
+    </summary>
+    
+      <category term="Server" scheme="http://JiwonYeom.github.io/categories/Server/"/>
+    
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
+    
+      <category term="Server" scheme="http://JiwonYeom.github.io/tags/Server/"/>
+    
+      <category term="NGINX" scheme="http://JiwonYeom.github.io/tags/NGINX/"/>
+    
+      <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
+    
+      <category term="Amazon Linux" scheme="http://JiwonYeom.github.io/tags/Amazon-Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DB Replication to RDS</title>
+    <link href="http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/"/>
+    <id>http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/</id>
+    <published>2017-09-22T04:39:41.000Z</published>
+    <updated>2017-10-09T01:47:54.187Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Please refer to &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.External.Repl.html&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/categories/AWS/"/>
+    
+    
+      <category term="DB" scheme="http://JiwonYeom.github.io/tags/DB/"/>
+    
+      <category term="Replication" scheme="http://JiwonYeom.github.io/tags/Replication/"/>
+    
+      <category term="RDS" scheme="http://JiwonYeom.github.io/tags/RDS/"/>
+    
+  </entry>
+  
+</feed>
