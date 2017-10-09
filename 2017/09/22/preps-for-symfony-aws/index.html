@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107714750-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107714750-1');
+    </script>
+
+    
+    <title>Symfony on AWS Linux | Code Jingles</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="PHP,Server,NGINX,Symfony,Amazon Linux" />
+    
+    <meta name="description" content="Preparing your AWS Linux server for SymfonyThis is a step by step write up for how to prepare your AWS Linux server environment for Symfony.  Get your EC2 instance with AWS Linux. I set everything def">
+<meta name="keywords" content="PHP,Server,NGINX,Symfony,Amazon Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Symfony on AWS Linux">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/index.html">
+<meta property="og:site_name" content="Code Jingles">
+<meta property="og:description" content="Preparing your AWS Linux server for SymfonyThis is a step by step write up for how to prepare your AWS Linux server environment for Symfony.  Get your EC2 instance with AWS Linux. I set everything def">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-09T01:31:30.935Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Symfony on AWS Linux">
+<meta name="twitter:description" content="Preparing your AWS Linux server for SymfonyThis is a step by step write up for how to prepare your AWS Linux server environment for Symfony.  Get your EC2 instance with AWS Linux. I set everything def">
+    
+
+    <!-- add font for custom -->
+    <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo_font">Code Jingles</a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Server/">Server</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-preps-for-symfony-aws" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Symfony on AWS Linux
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/22/preps-for-symfony-aws/" class="article-date">
+            <time datetime="2017-09-22T09:23:41.000Z" itemprop="datePublished">2017-09-22</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Amazon-Linux/">Amazon Linux</a>, <a class="tag-link" href="/tags/NGINX/">NGINX</a>, <a class="tag-link" href="/tags/PHP/">PHP</a>, <a class="tag-link" href="/tags/Server/">Server</a>, <a class="tag-link" href="/tags/Symfony/">Symfony</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="Preparing-your-AWS-Linux-server-for-Symfony"><a href="#Preparing-your-AWS-Linux-server-for-Symfony" class="headerlink" title="Preparing your AWS Linux server for Symfony"></a>Preparing your AWS Linux server for Symfony</h2><p>This is a step by step write up for how to prepare your AWS Linux server environment for <code>Symfony</code>.</p>
+<ol>
+<li><p>Get your <code>EC2 instance</code> with <code>AWS Linux</code>. I set everything default so that I can enjoy Free Tier. I strongly suggest you to get <code>EIP</code>(Elastic IP) too, so your instance won’t change its IP every time you reboot it.</p>
+</li>
+<li><p>Install NGINX, php, php-fpm, and mysql. Here’s shell script that I used.</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Basic Settings</span></div><div class="line">sudo yum update</div><div class="line">sudo yum install nginx</div><div class="line">sudo mkdir -p /tmp/php7</div><div class="line"><span class="built_in">cd</span> /tmp/php7/</div><div class="line">sudo wget https://mirror.webtatic.com/yum/el6/latest.rpm</div><div class="line">sudo yum install latest.rpm</div><div class="line">sudo vi /etc/yum.repos.d/webtatic.repo</div><div class="line">sudo yum clean all</div><div class="line"></div><div class="line"><span class="comment">#webtatic repo &amp; php installation</span></div><div class="line">sudo yum install --enablerepo=webtatic php70w</div><div class="line">php -v  <span class="comment">#php7.0</span></div><div class="line">sudo yum install php70w-opcache php70w-xml php70w-pdo</div><div class="line">sudo yum install php70w-mysqlnd php70w-gd php70w-apcu php70w-pecl-apcu php70w-mbstring php70w-imap</div><div class="line">sudo vi /etc/php.ini <span class="comment">#cgi.fix_pathinfo=0</span></div><div class="line">sudo yum install php70w-fpm</div><div class="line">sudo vi /etc/php-fpm.d/www.conf</div><div class="line"><span class="comment"># check listen, listen.owner, listen.group, user, group</span></div><div class="line"><span class="comment"># listen = /var/run/php-fpm/php-fpm.sock</span></div><div class="line"><span class="comment"># listen.owner = ec2-user</span></div><div class="line"><span class="comment"># listen.group = ec2-user</span></div><div class="line"><span class="comment"># user = ec2-user</span></div><div class="line"><span class="comment"># group = ec2-user</span></div><div class="line">sudo service php-fpm start</div><div class="line">sudo service php-fpm stataus <span class="comment">#should success here</span></div><div class="line"></div><div class="line"><span class="comment">#nginx - see nginx conf script that follows</span></div><div class="line">sudo vi /etc/nginx/nginx.conf</div><div class="line">sudo service nginx restart</div><div class="line"><span class="built_in">cd</span> /usr/share/nginx/html/</div><div class="line"></div><div class="line"><span class="comment">#phpinfo check</span></div><div class="line">sudo vi phpinfo.php  <span class="comment">#host/phpinfo.php</span></div><div class="line">sudo service nginx reload</div><div class="line"></div><div class="line">sudo vi /etc/php.ini  <span class="comment"># date.timezone = [your timezone]</span></div><div class="line">sudo service nginx reload</div><div class="line">sudo service nginx restart</div><div class="line"></div><div class="line"><span class="comment"># mysql</span></div><div class="line">sudo yum install -y mysql56-server</div><div class="line">sudo service mysqld start</div><div class="line">sudo mysql_secure_installation</div><div class="line"></div><div class="line"><span class="comment"># set restart when server goes off &amp; on</span></div><div class="line">sudo chkconfig nginx on</div><div class="line">sudo chkconfig php-fpm on</div><div class="line">sudo chkconfig mysqld on</div><div class="line">sudo chkconfig mysqld on</div></pre></td></tr></table></figure>
+<p>your nginx.conf settings:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"># your directory</div><div class="line">root /var/www/symfony/web;</div><div class="line"></div><div class="line">location / &#123;</div><div class="line">	try_files $uri /app.php$is_args$args;</div><div class="line">&#125;</div><div class="line"></div><div class="line"># DEV</div><div class="line">    # This rule should only be placed on your development environment</div><div class="line">    # In production, don&apos;t include this and don&apos;t deploy app_dev.php or config.php</div><div class="line">    location ~ ^/(app_dev|config)\.php(/|$) &#123;</div><div class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">        fastcgi_split_path_info ^(.+\.php)(/.*)$;</div><div class="line">        include fastcgi_params;</div><div class="line">        # When you are using symlinks to link the document root to the</div><div class="line">        # current version of your application, you should pass the real</div><div class="line">        # application path instead of the path to the symlink to PHP</div><div class="line">        # FPM.</div><div class="line">        # Otherwise, PHP&apos;s OPcache may not properly detect changes to</div><div class="line">        # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126</div><div class="line">        # for more information).</div><div class="line">        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;</div><div class="line">        fastcgi_param DOCUMENT_ROOT $realpath_root;</div><div class="line">    &#125;</div><div class="line">    # PROD</div><div class="line">    location ~ ^/app\.php(/|$) &#123;</div><div class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">        fastcgi_split_path_info ^(.+\.php)(/.*)$;</div><div class="line">        include fastcgi_params;</div><div class="line">        # When you are using symlinks to link the document root to the</div><div class="line">        # current version of your application, you should pass the real</div><div class="line">        # application path instead of the path to the symlink to PHP</div><div class="line">        # FPM.</div><div class="line">        # Otherwise, PHP&apos;s OPcache may not properly detect changes to</div><div class="line">        # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126</div><div class="line">        # for more information).</div><div class="line">        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;</div><div class="line">        fastcgi_param DOCUMENT_ROOT $realpath_root;</div><div class="line">        # Prevents URIs that include the front controller. This will 404:</div><div class="line">        # http://domain.tld/app.php/some-path</div><div class="line">        # Remove the internal directive to allow URIs like this</div><div class="line">        internal;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/" data-id="cj8jig4ty0022g0uay6d0et09" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Jiwon0603" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/JiwonYeom" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/09/30/jenkins-intro/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Jenkins
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/09/22/how-to-replicate-rds/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">DB Replication to RDS</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Data-Analysis/">Data Analysis</a></p>
+                            <p class="item-title"><a href="/2017/10/09/google-analytics-on-hexo/" class="title">Google Analytics on Hexo</a></p>
+                            <p class="item-date"><time datetime="2017-10-09T00:39:41.000Z" itemprop="datePublished">2017-10-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Uncategorized/">Uncategorized</a></p>
+                            <p class="item-title"><a href="/2017/10/08/GithubPages-Hexo/" class="title">Github Pages With Hexo</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T10:36:03.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Uncategorized/">Uncategorized</a></p>
+                            <p class="item-title"><a href="/2017/10/08/TIL-to-blog/" class="title">TIL to blog</a></p>
+                            <p class="item-date"><time datetime="2017-10-08T09:24:20.000Z" itemprop="datePublished">2017-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+                            <p class="item-title"><a href="/2017/10/06/symfony-review-2/" class="title">Symfony Review-2</a></p>
+                            <p class="item-date"><time datetime="2017-10-06T10:16:05.000Z" itemprop="datePublished">2017-10-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+                            <p class="item-title"><a href="/2017/10/03/symfony-review-1/" class="title">Symfony Review-1</a></p>
+                            <p class="item-date"><time datetime="2017-10-03T10:16:02.000Z" itemprop="datePublished">2017-10-03</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Analysis/">Data Analysis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML-CSS/">HTML&CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Network/">Network</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AWS/" style="font-size: 12.5px;">AWS</a> <a href="/tags/Amazon-Linux/" style="font-size: 10px;">Amazon Linux</a> <a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/BEM/" style="font-size: 12.5px;">BEM</a> <a href="/tags/Beginner/" style="font-size: 12.5px;">Beginner</a> <a href="/tags/Blog/" style="font-size: 12.5px;">Blog</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/CURL/" style="font-size: 10px;">CURL</a> <a href="/tags/Class/" style="font-size: 12.5px;">Class</a> <a href="/tags/Closure/" style="font-size: 10px;">Closure</a> <a href="/tags/Codeigniter/" style="font-size: 10px;">Codeigniter</a> <a href="/tags/DB/" style="font-size: 10px;">DB</a> <a href="/tags/DNS/" style="font-size: 12.5px;">DNS</a> <a href="/tags/Data-Structure/" style="font-size: 15px;">Data Structure</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Framework/" style="font-size: 12.5px;">Framework</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Google-Analytics/" style="font-size: 10px;">Google Analytics</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/HTTP/" style="font-size: 12.5px;">HTTP</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/NGINX/" style="font-size: 12.5px;">NGINX</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/PHP/" style="font-size: 17.5px;">PHP</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Replication/" style="font-size: 10px;">Replication</a> <a href="/tags/Server/" style="font-size: 15px;">Server</a> <a href="/tags/Symfony/" style="font-size: 15px;">Symfony</a> <a href="/tags/TIL/" style="font-size: 10px;">TIL</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">11</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/JiwonYeom/TIL">TIL(GitHub)</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo_font">Code Jingles</a>
+                </h1>
+                <p>&copy; 2017 Jiwon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'jiwonyeom';
+    
+    
+    var disqus_url = 'http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
