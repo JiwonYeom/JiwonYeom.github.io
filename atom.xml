@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-10-09T01:47:43.395Z</updated>
+  <updated>2017-10-10T12:30:00.792Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo Review</title>
+    <link href="http://JiwonYeom.github.io/2017/10/09/Hexo-Review/"/>
+    <id>http://JiwonYeom.github.io/2017/10/09/Hexo-Review/</id>
+    <published>2017-10-09T08:00:27.000Z</published>
+    <updated>2017-10-10T12:30:00.792Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Has been only two days since I’ve used Hexo, but I found several pros and cons that people might find interesting.&lt;/p&gt;
+&lt;h3 id=&quot;Pro&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://JiwonYeom.github.io/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
+    
+  </entry>
   
   <entry>
     <title>Google Analytics on Hexo</title>
@@ -39,9 +66,9 @@
       <category term="Data Analysis" scheme="http://JiwonYeom.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
-    
       <category term="Beginner" scheme="http://JiwonYeom.github.io/tags/Beginner/"/>
+    
+      <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
     
       <category term="Google Analytics" scheme="http://JiwonYeom.github.io/tags/Google-Analytics/"/>
     
@@ -279,41 +306,11 @@
     
       <category term="Server" scheme="http://JiwonYeom.github.io/tags/Server/"/>
     
-      <category term="NGINX" scheme="http://JiwonYeom.github.io/tags/NGINX/"/>
-    
       <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
     
+      <category term="NGINX" scheme="http://JiwonYeom.github.io/tags/NGINX/"/>
+    
       <category term="Amazon Linux" scheme="http://JiwonYeom.github.io/tags/Amazon-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DB Replication to RDS</title>
-    <link href="http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/"/>
-    <id>http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/</id>
-    <published>2017-09-22T04:39:41.000Z</published>
-    <updated>2017-10-09T01:47:54.187Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Please refer to &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.External.Repl.html&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://JiwonYeom.github.io/categories/AWS/"/>
-    
-    
-      <category term="DB" scheme="http://JiwonYeom.github.io/tags/DB/"/>
-    
-      <category term="Replication" scheme="http://JiwonYeom.github.io/tags/Replication/"/>
-    
-      <category term="RDS" scheme="http://JiwonYeom.github.io/tags/RDS/"/>
     
   </entry>
   

@@ -3,24 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Codeigniter | Code Jingles</title>
+    <title>Hexo Review | Code Jingles</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="PHP,Codeigniter" />
+        <meta name="keywords" content="Hexo,Blog" />
     
-    <meta name="description" content="Recently I’ve been using Codeigniter, and here’s how to use or create CI library. How to use itCI default libraries are located in system/libraries, and in order to use it, you just need to initialize">
-<meta name="keywords" content="PHP,Codeigniter">
+    <meta name="description" content="Has been only two days since I’ve used Hexo, but I found several pros and cons that people might find interesting. Pro Super easy &amp;amp; Fast deploymentAll you need to do is write up your markdown file">
+<meta name="keywords" content="Hexo,Blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeigniter">
-<meta property="og:url" content="http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/index.html">
+<meta property="og:title" content="Hexo Review">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/09/Hexo-Review/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Recently I’ve been using Codeigniter, and here’s how to use or create CI library. How to use itCI default libraries are located in system/libraries, and in order to use it, you just need to initialize">
+<meta property="og:description" content="Has been only two days since I’ve used Hexo, but I found several pros and cons that people might find interesting. Pro Super easy &amp;amp; Fast deploymentAll you need to do is write up your markdown file">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:46:41.131Z">
+<meta property="og:updated_time" content="2017-10-10T12:30:00.792Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeigniter">
-<meta name="twitter:description" content="Recently I’ve been using Codeigniter, and here’s how to use or create CI library. How to use itCI default libraries are located in system/libraries, and in order to use it, you just need to initialize">
+<meta name="twitter:title" content="Hexo Review">
+<meta name="twitter:description" content="Has been only two days since I’ve used Hexo, but I found several pros and cons that people might find interesting. Pro Super easy &amp;amp; Fast deploymentAll you need to do is write up your markdown file">
     
 
     <!-- add font for custom -->
@@ -136,18 +136,18 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/PHP/">PHP</a>
+    uncategorized
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-codeigniter-use-library" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Hexo-Review" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Codeigniter
+        Hexo Review
         </h1>
     
 
@@ -157,40 +157,39 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/09/30/codeigniter-use-library/" class="article-date">
-            <time datetime="2017-09-30T02:23:41.000Z" itemprop="datePublished">2017-09-30</time>
+        <a href="/2017/10/09/Hexo-Review/" class="article-date">
+            <time datetime="2017-10-09T08:00:27.000Z" itemprop="datePublished">2017-10-09</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Codeigniter/">Codeigniter</a>, <a class="tag-link" href="/tags/PHP/">PHP</a>
+        <a class="tag-link" href="/tags/Blog/">Blog</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Recently I’ve been using Codeigniter, and here’s how to use or create CI library.</p>
-<h2 id="How-to-use-it"><a href="#How-to-use-it" class="headerlink" title="How to use it"></a>How to use it</h2><p>CI default libraries are located in <code>system/libraries</code>, and in order to use it, you just need to initialize it and use it.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//initialize</div><div class="line">$this-&gt;load-&gt;library(&apos;class-name&apos;);</div></pre></td></tr></table></figure>
-<p>Different library has different way to use it, so you need to check the <a href="https://codeigniter.com/userguide3/libraries/index.html" target="_blank" rel="external">documentation</a> for each library.</p>
-<h2 id="How-to-create-it"><a href="#How-to-create-it" class="headerlink" title="How to create it"></a>How to create it</h2><p>You can also create a library. According to CI documentation, we can do three things.</p>
-<ol>
-<li>Create new library.</li>
-<li>Extend native library.</li>
-<li>Replace native library.<br>note* database class cannot be extended or replaced.</li>
-</ol>
-<p>Keep three rules</p>
-<ol>
-<li>Capitalize first letter for file names.</li>
-<li>Capitalize first letter of class name.</li>
-<li>Class name must match the file name.</li>
-</ol>
-<p>After you create your library class, you can use it like when you are using native library.<br>But if you want to pass parameters when you initialize your class, you must make your constructor accept parameters.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">class Someclass &#123;</div><div class="line"></div><div class="line">        public function __construct($params)</div><div class="line">        &#123;</div><div class="line">            // Do something with $params</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Extending or utilizing CI resources in your library will be discussed in another time.</p>
+            <p>Has been only two days since I’ve used Hexo, but I found several pros and cons that people might find interesting.</p>
+<h3 id="Pro"><a href="#Pro" class="headerlink" title="Pro"></a>Pro</h3><ul>
+<li>Super easy &amp; Fast deployment<br>All you need to do is write up your markdown files, and type single command<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$hexo deploy -g</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>And that’ll deploy it to your Github Pages :)</p>
+<ul>
+<li>Customizable themes<br>You can get Hexo themes easily and customize it your way!<br>It was my first time seeing <code>.ejs</code> files and <code>.styl</code> files, but hey, it was easy to customize it the way I want.<br>For example, I switched the top banner image to text. I’m thinking of creating my own theme later too!</li>
+</ul>
+<h3 id="Con"><a href="#Con" class="headerlink" title="Con"></a>Con</h3><ul>
+<li><p>HTML files are generated EVERY TIME you deploy<br>This means the more markdown files you have, more files you’ll be re-deploying. So far I’m not sure how much this is going to affect the deployment process, but I’m just a bit hesitant over its performance when the files pile up.</p>
+</li>
+<li><p>Can’t see which file was updated / added in Github repository<br>Since ALL files are re-deployed, you can’t see which one has changed from former commit. All resource files will be renewed, including the files that have not changed.</p>
+</li>
+<li><p>If you lose local files (markdowns), you won’t be able to recocver them.<br>You’ll have to diligently back-up your markdown files and customized files. I’m still looking for a solution for this, but as long as I know there is no way to recover your markdown files if you lose them. This means your site won’t be deployable again, because if you deploy your site with empty posts, your site will also be synch’ed to an empty website.</p>
+</li>
+</ul>
+<p>I find this a huge bummer, and it concerns me a lot. I have my own TIL repository which I keep my bits of daily TIL’s, but also thinking of back-up mechanism for my whole hexo directory.<br>(Please give me advice on this if you know how to overcome it in a sustainable way!)</p>
 
         </div>
         <footer class="article-footer">
@@ -198,7 +197,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/" data-id="cj8ll3x9b000z60ua0mbgvv5j" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://JiwonYeom.github.io/2017/10/09/Hexo-Review/" data-id="cj8ll3x79000460uawz0kyxaz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -303,20 +302,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2017/09/30/installing-package/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Installing a Package
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/09/30/jenkins-intro/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/10/09/google-analytics-on-hexo/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Jenkins</p>
+        <p class="article-nav-title">Google Analytics on Hexo</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -454,7 +443,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'jiwonyeom';
     
     
-    var disqus_url = 'http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/';
+    var disqus_url = 'http://JiwonYeom.github.io/2017/10/09/Hexo-Review/';
     
     (function() {
     var dsq = document.createElement('script');
