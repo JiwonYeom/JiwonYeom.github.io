@@ -3,17 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Archive: 2017 | Code Jingles</title>
+    <title>Learning AWS (Packtpub) Summary | Code Jingles</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Code Jingles">
-<meta property="og:url" content="http://JiwonYeom.github.io/archives/2017/page/4/index.html">
+        <meta name="keywords" content="AWS" />
+    
+    <meta name="description" content="This is a summary of the eBook from Packtpub, Learning AWS Cloud service models Iaas (Infrastructure as a Service) - Users deploy &amp;amp; run their own apps on a service that they can control provision">
+<meta name="keywords" content="AWS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning AWS (Packtpub) Summary">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/14/learning-aws-summary/index.html">
 <meta property="og:site_name" content="Code Jingles">
+<meta property="og:description" content="This is a summary of the eBook from Packtpub, Learning AWS Cloud service models Iaas (Infrastructure as a Service) - Users deploy &amp;amp; run their own apps on a service that they can control provision">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-10-14T11:01:25.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Code Jingles">
+<meta name="twitter:title" content="Learning AWS (Packtpub) Summary">
+<meta name="twitter:description" content="This is a summary of the eBook from Packtpub, Learning AWS Cloud service models Iaas (Infrastructure as a Service) - Users deploy &amp;amp; run their own apps on a service that they can control provision">
     
 
     <!-- add font for custom -->
@@ -129,91 +136,209 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2017
+    <a class="page-title-link" href="/categories/AWS/">AWS</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-learning-aws-summary" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/HTTP/">HTTP</a>
-            </div>
-            <div class="date"><time datetime="2017-07-19T01:08:00.000Z" itemprop="datePublished">2017-07-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/19/http-basics/">HTTP Basics</a>
+        Learning AWS (Packtpub) Summary
         </h1>
     
 
-        <p class="article-excerpt">
-            HTTP basicsHTTP allows two types of messages to be transferred between client and server. Both HTTP Request and HTTP Response have common format, and contains HTTP Header and HTTP Body.
-HTTP Header
-Co
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
+            </header>
         
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Git/">Git</a>
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/10/14/learning-aws-summary/" class="article-date">
+            <time datetime="2017-10-14T10:57:30.000Z" itemprop="datePublished">2017-10-14</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/AWS/">AWS</a>
+    </div>
+
             </div>
-            <div class="date"><time datetime="2017-07-19T01:06:00.000Z" itemprop="datePublished">2017-07-19</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/07/19/basic-commands/">Git Basics</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This is a summary of the eBook from Packtpub, <a href="https://www.packtpub.com/virtualization-and-cloud/learning-aws" target="_blank" rel="external">Learning AWS</a></p>
+<h4 id="Cloud-service-models"><a href="#Cloud-service-models" class="headerlink" title="Cloud service models"></a>Cloud service models</h4><ul>
+<li>Iaas (Infrastructure as a Service) - Users deploy &amp; run their own apps on a service that they can control provision processing, storage, network resources. Traditional in-premise, virtual server provisioning.</li>
+<li>Paas (Platform as a Service) - service provider takes control of most services. Customer takes leverage of these to build their apps, focusing on app functions</li>
+<li>Saas (Software as a Service) - Typically third-party providers provides subscribe-based services to their users. Customers focus on content management and customize provided service</li>
+</ul>
+<h5 id="Designing-Cloud-Application"><a href="#Designing-Cloud-Application" class="headerlink" title="Designing Cloud Application"></a>Designing Cloud Application</h5><ul>
+<li>Multi-tier architecture</li>
+<li>UI tier, app/business tier, data tier. OR commonly web server, app server, database</li>
+<li>Usually supports auto-scaling &amp; load balancing<br>Implements master-slave DB model</li>
+</ul>
+<h5 id="Multi-tenacy"><a href="#Multi-tenacy" class="headerlink" title="Multi-tenacy"></a>Multi-tenacy</h5><ul>
+<li>cost saving by infra sharing &amp; efficiency in managing single instance of application across multiple customers / tenants.</li>
+<li>This is a complex design.</li>
+<li>Issue in a tenant can lead to issues in other tenants<br>share-nothing to share-everything</li>
+</ul>
+<h5 id="Designing-for-Failure"><a href="#Designing-for-Failure" class="headerlink" title="Designing for Failure"></a>Designing for Failure</h5><ul>
+<li>Assume that things will fail.</li>
+<li>Assume that hardware will fail. Cloud Data center outages. Database failure. Transaction exceeded. etc.<br>Minimize human / manual intervention. Ex) Use AWS CloudFormation to install,configure,start application.<br>Key principles</li>
+<li>Do not store app state on your servers. You will lose them. Sessions should never be stored to local file systems.</li>
+<li>Logging should always be stored in a centralized location (ex. DB or third-party logging service)</li>
+<li>Log records should contain additional cloud-specific info (instance ID, region, AZ, tenant ID…etc) Include application-specific sequence of calls or requests if possible. Use tools for viewing, searching, and filtering logs for big logs.</li>
+<li>If a request fails on server (5xx error), you should try cloud provider’s SDK features for retry logics. You should log the retry attempts too. If retry attempts are too many, consider reviewing infrastructure size.</li>
+</ul>
+<h4 id="AWS-Components-Cost-Model-Application-Development-Environments"><a href="#AWS-Components-Cost-Model-Application-Development-Environments" class="headerlink" title="AWS Components, Cost Model, Application Development Environments"></a>AWS Components, Cost Model, Application Development Environments</h4><ul>
+<li>Optimizing cloud infrastructure costs<ul>
+<li>Choose right size for EC2 (size, type, available network bandwidth)</li>
+<li>Turn off unused instances</li>
+<li>Use Auto Scaling</li>
+<li>Use reserved instances - can help save 50-60% or higher on our instance costs.</li>
+<li>Use spot instances - you can set maximum price that is much lower than regular on-demand price, and when Amazon has extra capacity, they can provide you. This means your instance will be terminated when it becomes unavailable, but building a correct fail-over will prevent your service from being affected.</li>
+<li>Use S3 storage class - RRS(Reduced Redundancy Storage) option in S3 can reduce cost by storing non-critical and easily restorable data at lower levels of redundancy than standard option. It stores data in multiple facilities and on multiple devices, but replicated fewer times (99.99% durability)</li>
+<li>Amazon glacier can be used for storing backups and archiving old data.</li>
+<li>DB costs - Caching and read replicas can reduce the capacity needed for DB instance. Use spare local RAM cache in your app server or Amazon ElastiCache. Amazon SQS can be another option, that will buffer writes that exceed your provisioned capacity.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Designing-for-and-Implementing-Scalability"><a href="#Designing-for-and-Implementing-Scalability" class="headerlink" title="Designing for and Implementing Scalability"></a>Designing for and Implementing Scalability</h4><ul>
+<li>Defining scalability objectives - To achieve scalability, your application architecture must be scalable in order to leverage the services provided by AWS cloud.<ul>
+<li>Application should respond proportionally.</li>
+<li>Operationally efficient &amp;cost-effective.</li>
+</ul>
+</li>
+<li>Designing scalable application architectures<ul>
+<li>Use appropriate AWS PaaS services</li>
+<li>Use scale-put approach - this allows you to distribute application components, partition your data, and follow a service-oriented design strategy.</li>
+<li>Implement loosely coupled components. - SQS ensures app will perform in sitaution of high concurrency, unpredictable loads, and/or load spikes. Make your components stateless as possible.</li>
+<li>Implement asynch processing - ensure you include enough logs for troubleshooting. Also, AWS Kinesis data streams can help you create asynch pipelines</li>
+</ul>
+</li>
+<li>Leveraging AWS infrastructure services for scalability<ul>
+<li>CloudFront to distribute content - static contents should be delivered through CloudFront CDN</li>
+<li>AWS ELB to scale.</li>
+<li>AWS CloudWatch to implement auto scaling</li>
+<li>Scaling data services</li>
+<li>Scaling proactively - keep track of traffic patterns or events and use that information to proactively plan scaling.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Designing-for-and-implementing-High-Availability"><a href="#Designing-for-and-implementing-High-Availability" class="headerlink" title="Designing for and implementing High Availability"></a>Designing for and implementing High Availability</h4><ul>
+<li>Define availability objectives - Things are to fail at some point. Set a clear object to keep.</li>
+<li>Nature of failures<ul>
+<li>VPC for high availability<ul>
+<li>carefully select your primary site and DR site. Primary site to closest towards your customers, and DR to the closes region or different country.</li>
+<li>Set up network topology.</li>
+<li>Public facing servers -&gt; public subnet. DB server &amp; other app servers -&gt; private subnet<br>choose different sets of IP addresses across different regions (multi-region deployment)</li>
+<li>Appropriate routing table and ACL should be defined<br>Define primary &amp; secondary tunnels.</li>
+<li>Set up gateway servers and NAT, to act as gatekeepers. Gateway –&gt; public subnet. NAT–&gt;private subnet.</li>
+</ul>
+</li>
+<li>ELB &amp; Route53<ul>
+<li>Instance availability - never run a single instance in a production enviroinment. Run multiple EC2 instances and put ELB in front.</li>
+</ul>
+</li>
+<li>Zonal availability / availability zone redundancy  - Very important to run your application stack in more than one zone. But makesure component level dependencies across zones could lead to latencies / failures.  </li>
+<li>Regional availability / regional redundancy - ELB and Route 53 supports single application across multiple regions.</li>
+<li>High availability for application &amp; data layer<ul>
+<li>AWS OpsWorks provide a good recovery mechanism. Auto healing -&gt; if layer/instance becomes unhealthy, OpsWorks terminates the instance and starts a new one.</li>
+<li>Cold starts from preconfigured images / warm start from scaled down instances in a secondary region</li>
+<li>Stateless &amp; micro-service oriented architecture can help. In this design service failure is contained / isolated to that service while the rest of your application service runs normally.</li>
+<li>User / session information should be stored in central location such as ElastiCache &amp; distribute it across multi AZ</li>
+<li>Rigorous implementation of exception handling code</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-        <p class="article-excerpt">
-            There are several basic git commands we should know.
+        </div>
+        <footer class="article-footer">
+            
 
-git status : Shows current status of files in a git-registered directory.
-git add [file / file directory] : Stages files or files under the direct
-        </p>
+
+
+    <a data-url="http://JiwonYeom.github.io/2017/10/14/learning-aws-summary/" data-id="cj8r7nfsm001xv0ual19i6454" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
-    <nav id="page-nav">
-        <span class="pages">Page 4 of 4</span>
-        <a class="extend prev" rel="prev" href="/archives/2017/page/3/">&laquo;</a><a class="page-number" href="/archives/2017/">1</a><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
+    </section>
 
 
                         </div>
@@ -242,6 +367,19 @@ git add [file / file directory] : Stages files or files under the direct
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/10/09/Hexo-Review/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo Review</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -374,11 +512,13 @@ git add [file / file directory] : Stages files or files under the direct
     var disqus_shortname = 'jiwonyeom';
     
     
+    var disqus_url = 'http://JiwonYeom.github.io/2017/10/14/learning-aws-summary/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

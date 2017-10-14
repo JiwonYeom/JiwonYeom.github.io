@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-10-10T12:30:00.792Z</updated>
+  <updated>2017-10-14T11:01:25.440Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning AWS (Packtpub) Summary</title>
+    <link href="http://JiwonYeom.github.io/2017/10/14/learning-aws-summary/"/>
+    <id>http://JiwonYeom.github.io/2017/10/14/learning-aws-summary/</id>
+    <published>2017-10-14T10:57:30.000Z</published>
+    <updated>2017-10-14T11:01:25.440Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;This is a summary of the eBook from Packtpub, &lt;a href=&quot;https://www.packtpub.com/virtualization-and-cloud/learning-aws&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/categories/AWS/"/>
+    
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/tags/AWS/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo Review</title>
@@ -275,42 +301,6 @@
     
     
       <category term="Jenkins" scheme="http://JiwonYeom.github.io/tags/Jenkins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony on AWS Linux</title>
-    <link href="http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/"/>
-    <id>http://JiwonYeom.github.io/2017/09/22/preps-for-symfony-aws/</id>
-    <published>2017-09-22T09:23:41.000Z</published>
-    <updated>2017-10-09T01:48:30.380Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;This is a step by step write up for how to prepare your AWS Linux server environment for &lt;code&gt;Symfony&lt;/code&gt;.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Get your
-        
-      
-    
-    </summary>
-    
-      <category term="Server" scheme="http://JiwonYeom.github.io/categories/Server/"/>
-    
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
-    
-      <category term="Server" scheme="http://JiwonYeom.github.io/tags/Server/"/>
-    
-      <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
-    
-      <category term="NGINX" scheme="http://JiwonYeom.github.io/tags/NGINX/"/>
-    
-      <category term="Amazon Linux" scheme="http://JiwonYeom.github.io/tags/Amazon-Linux/"/>
     
   </entry>
   
