@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-10-14T11:01:25.440Z</updated>
+  <updated>2017-10-19T13:22:39.118Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>도커의 컨테이너</title>
+    <link href="http://JiwonYeom.github.io/2017/10/19/docker-container/"/>
+    <id>http://JiwonYeom.github.io/2017/10/19/docker-container/</id>
+    <published>2017-10-19T13:19:48.000Z</published>
+    <updated>2017-10-19T13:22:39.118Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;이 &lt;a href=&quot;https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Devops" scheme="http://JiwonYeom.github.io/categories/Devops/"/>
+    
+    
+      <category term="Docker" scheme="http://JiwonYeom.github.io/tags/Docker/"/>
+    
+      <category term="Container" scheme="http://JiwonYeom.github.io/tags/Container/"/>
+    
+      <category term="VM" scheme="http://JiwonYeom.github.io/tags/VM/"/>
+    
+  </entry>
   
   <entry>
     <title>Learning AWS (Packtpub) Summary</title>
@@ -271,36 +301,6 @@
       <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
     
       <category term="Codeigniter" scheme="http://JiwonYeom.github.io/tags/Codeigniter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jenkins</title>
-    <link href="http://JiwonYeom.github.io/2017/09/30/jenkins-intro/"/>
-    <id>http://JiwonYeom.github.io/2017/09/30/jenkins-intro/</id>
-    <published>2017-09-30T01:03:45.000Z</published>
-    <updated>2017-10-09T01:48:21.670Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;Keywords:&lt;br&gt; Continuous Integration, Hudson&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Installed on a central build server to let
-        
-      
-    
-    </summary>
-    
-      <category term="DevOps" scheme="http://JiwonYeom.github.io/categories/DevOps/"/>
-    
-    
-      <category term="Jenkins" scheme="http://JiwonYeom.github.io/tags/Jenkins/"/>
     
   </entry>
   
