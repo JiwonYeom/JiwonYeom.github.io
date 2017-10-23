@@ -3,24 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>DB Replication to RDS | Code Jingles</title>
+    <title>Tag: Soultion Architect Associate | Code Jingles</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="DB,Replication,RDS" />
-    
-    <meta name="description" content="Please refer to this document for official guidelines. I will be discussing only tips I gained while I was doing this.  You will have to set unique server id in your /etc/my.cnf file. Add the followin">
-<meta name="keywords" content="DB,Replication,RDS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="DB Replication to RDS">
-<meta property="og:url" content="http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Code Jingles">
+<meta property="og:url" content="http://JiwonYeom.github.io/tags/Soultion-Architect-Associate/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Please refer to this document for official guidelines. I will be discussing only tips I gained while I was doing this.  You will have to set unique server id in your /etc/my.cnf file. Add the followin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:47:54.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DB Replication to RDS">
-<meta name="twitter:description" content="Please refer to this document for official guidelines. I will be discussing only tips I gained while I was doing this.  You will have to set unique server id in your /etc/my.cnf file. Add the followin">
+<meta name="twitter:title" content="Code Jingles">
     
 
     <!-- add font for custom -->
@@ -136,157 +129,56 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/AWS/">AWS</a>
+    <i class="icon fa fa-tag"></i>Tag: <em>Soultion Architect Associate</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-how-to-replicate-rds" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/AWS/">AWS</a>
+            </div>
+            <div class="date"><time datetime="2017-10-23T13:12:08.000Z" itemprop="datePublished">2017-10-23</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        DB Replication to RDS
+        <a href="/2017/10/23/preps-for-aws-saa/">Preparation for AWS SAA Certificate</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/09/22/how-to-replicate-rds/" class="article-date">
-            <time datetime="2017-09-22T04:39:41.000Z" itemprop="datePublished">2017-09-22</time>
-        </a>
-    </div>
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/DB/">DB</a>, <a class="tag-link" href="/tags/RDS/">RDS</a>, <a class="tag-link" href="/tags/Replication/">Replication</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p>Please refer to <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.External.Repl.html" target="_blank" rel="external">this</a> document for official guidelines. I will be discussing only tips I gained while I was doing this.</p>
-<ul>
-<li>You will have to set unique server id in your <code>/etc/my.cnf</code> file. Add the following part</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[mysqld]</div><div class="line"><span class="built_in">log</span>-bin=mysql-bin</div><div class="line">server-id=1</div></pre></td></tr></table></figure>
-<ul>
-<li>In the official document, step 6 (creating user and granting permission) could be confusing if you are a complete newbie in server and all (which is me!!), and I made a mistake by creating and granting permission to a dedicated user for replication in AWS RDS.</li>
-</ul>
-<p>This might sound stupid, but I know some of the newcomers will be making same mistake as mine, so here goes.</p>
-<p>User that is going to be used in the replication process should be made from the MASTER server, not SLAVE server.<br>This means the master server will <em>recognize</em> the user from that domain you assign. Which means:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CREATE USER <span class="string">'repl_user'</span>@<span class="string">'mydomain.com'</span> IDENTIFIED BY <span class="string">'&lt;password&gt;'</span>;</div><div class="line">GRANT REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO <span class="string">'repl_user'</span>@<span class="string">'mydomain.com'</span> IDENTIFIED BY <span class="string">'&lt;password&gt;'</span>;</div></pre></td></tr></table></figure>
-<p>You will have to run this</p>
-<ol>
-<li>In your <strong>master</strong> server.</li>
-<li>That <em>‘mydomain.com’</em> part is host of RDS server. In other words, the <strong>RDS hostname</strong>, or its IP address. I don’t know about others, but the term ‘mydoman’ can be confusing. I put literally my server’s domain in first place.</li>
-</ol>
-<p>Other parts are pretty straightforward, so you should be okay.</p>
-<ul>
-<li><p>In official document, step 8 can be ANOTHER confusing part. The <code>mymasterserver.mydomain.com</code> here, is <strong>MASTER SERVER</strong>‘s domain. Since both step 6~7 and 8 says <em>mydomain.com</em>, I felt like it was very confusing for someone who tries this out for first time and have no server background like me.</p>
-</li>
-<li><p>Once it successes on replication process, you should check it by <code>show slave status\G;</code> command.<br>The message that says <em>Slave running normally</em> does NOT guarantee that it is actually running.</p>
-</li>
-</ul>
-<p>If you see error messages in the status, you should stop the replication by</p>
-<p><code>CALL mysql.rds_stop_replication;</code></p>
-<p>and change settings(it could be at your master server OR your slave server), start it again by</p>
-<p><code>CALL mysql.rds_start_replication;</code></p>
-<ul>
-<li>If it’s running successfully, you should see no errors and instead see something like<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Exec_Master_Log_Pos: 75456</div><div class="line">Relay_Log_Space: 76280</div><div class="line">...</div><div class="line">Seconds_Behind_Master: 0</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>which is an indicator that your replication is running, showing gap with the master server.</p>
-<ul>
-<li>At your master server, you can also check if your DBs are connected well by commands like <code>show master status\G</code> or <code>show slave hosts\G</code>.</li>
-</ul>
-
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/" data-id="cj947qgr7001pzcua2dtmkr70" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            Test guides
+https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide
+https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associ
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
 
 
                         </div>
@@ -315,29 +207,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2017/09/22/preps-for-symfony-aws/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Symfony on AWS Linux
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2017/09/22/AWS-2/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">AWS (2)</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -470,13 +339,11 @@ ga('send', 'pageview');
     var disqus_shortname = 'jiwonyeom';
     
     
-    var disqus_url = 'http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

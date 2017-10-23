@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-10-19T13:22:39.118Z</updated>
+  <updated>2017-10-23T13:24:12.191Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Preparation for AWS SAA Certificate</title>
+    <link href="http://JiwonYeom.github.io/2017/10/23/preps-for-aws-saa/"/>
+    <id>http://JiwonYeom.github.io/2017/10/23/preps-for-aws-saa/</id>
+    <published>2017-10-23T13:12:08.000Z</published>
+    <updated>2017-10-23T13:24:12.191Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;Test-guides&quot;&gt;&lt;a href=&quot;#Test-guides&quot; class=&quot;headerlink&quot; title=&quot;Test guides&quot;&gt;&lt;/a&gt;Test guides&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/categories/AWS/"/>
+    
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/tags/AWS/"/>
+    
+      <category term="Soultion Architect Associate" scheme="http://JiwonYeom.github.io/tags/Soultion-Architect-Associate/"/>
+    
+  </entry>
   
   <entry>
     <title>도커의 컨테이너</title>
@@ -272,35 +301,6 @@
     
     
       <category term="Server" scheme="http://JiwonYeom.github.io/tags/Server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Codeigniter</title>
-    <link href="http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/"/>
-    <id>http://JiwonYeom.github.io/2017/09/30/codeigniter-use-library/</id>
-    <published>2017-09-30T02:23:41.000Z</published>
-    <updated>2017-10-09T01:46:41.131Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Recently I’ve been using Codeigniter, and here’s how to use or create CI library.&lt;/p&gt;
-&lt;h2 id=&quot;How-to-use-it&quot;&gt;&lt;a href=&quot;#How-to-use-it&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
-    
-      <category term="Codeigniter" scheme="http://JiwonYeom.github.io/tags/Codeigniter/"/>
     
   </entry>
   

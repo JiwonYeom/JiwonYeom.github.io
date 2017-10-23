@@ -3,24 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>DB Replication to RDS | Code Jingles</title>
+    <title>Preparation for AWS SAA Certificate | Code Jingles</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="DB,Replication,RDS" />
+        <meta name="keywords" content="AWS,Soultion Architect Associate" />
     
-    <meta name="description" content="Please refer to this document for official guidelines. I will be discussing only tips I gained while I was doing this.  You will have to set unique server id in your /etc/my.cnf file. Add the followin">
-<meta name="keywords" content="DB,Replication,RDS">
+    <meta name="description" content="Test guides https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associ">
+<meta name="keywords" content="AWS,Soultion Architect Associate">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DB Replication to RDS">
-<meta property="og:url" content="http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/index.html">
+<meta property="og:title" content="Preparation for AWS SAA Certificate">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/10/23/preps-for-aws-saa/index.html">
 <meta property="og:site_name" content="Code Jingles">
-<meta property="og:description" content="Please refer to this document for official guidelines. I will be discussing only tips I gained while I was doing this.  You will have to set unique server id in your /etc/my.cnf file. Add the followin">
+<meta property="og:description" content="Test guides https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associ">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-09T01:47:54.187Z">
+<meta property="og:updated_time" content="2017-10-23T13:24:12.191Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DB Replication to RDS">
-<meta name="twitter:description" content="Please refer to this document for official guidelines. I will be discussing only tips I gained while I was doing this.  You will have to set unique server id in your /etc/my.cnf file. Add the followin">
+<meta name="twitter:title" content="Preparation for AWS SAA Certificate">
+<meta name="twitter:description" content="Test guides https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associ">
     
 
     <!-- add font for custom -->
@@ -140,14 +140,14 @@ ga('send', 'pageview');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-how-to-replicate-rds" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-preps-for-aws-saa" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        DB Replication to RDS
+        Preparation for AWS SAA Certificate
         </h1>
     
 
@@ -157,55 +157,37 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/09/22/how-to-replicate-rds/" class="article-date">
-            <time datetime="2017-09-22T04:39:41.000Z" itemprop="datePublished">2017-09-22</time>
+        <a href="/2017/10/23/preps-for-aws-saa/" class="article-date">
+            <time datetime="2017-10-23T13:12:08.000Z" itemprop="datePublished">2017-10-23</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/DB/">DB</a>, <a class="tag-link" href="/tags/RDS/">RDS</a>, <a class="tag-link" href="/tags/Replication/">Replication</a>
+        <a class="tag-link" href="/tags/AWS/">AWS</a>, <a class="tag-link" href="/tags/Soultion-Architect-Associate/">Soultion Architect Associate</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Please refer to <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.External.Repl.html" target="_blank" rel="external">this</a> document for official guidelines. I will be discussing only tips I gained while I was doing this.</p>
-<ul>
-<li>You will have to set unique server id in your <code>/etc/my.cnf</code> file. Add the following part</li>
+            <h4 id="Test-guides"><a href="#Test-guides" class="headerlink" title="Test guides"></a>Test guides</h4><ul>
+<li><a href="https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide" target="_blank" rel="external">https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide</a></li>
+<li><a href="https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associate_blueprint.6d9ea1982215fc5fcd05137937a6dd52e2b14efe.pdf" target="_blank" rel="external">https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associate_blueprint.6d9ea1982215fc5fcd05137937a6dd52e2b14efe.pdf</a></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[mysqld]</div><div class="line"><span class="built_in">log</span>-bin=mysql-bin</div><div class="line">server-id=1</div></pre></td></tr></table></figure>
-<ul>
-<li>In the official document, step 6 (creating user and granting permission) could be confusing if you are a complete newbie in server and all (which is me!!), and I made a mistake by creating and granting permission to a dedicated user for replication in AWS RDS.</li>
+<h4 id="Good-to-read-Whitepapers"><a href="#Good-to-read-Whitepapers" class="headerlink" title="Good-to-read Whitepapers"></a>Good-to-read Whitepapers</h4><ul>
+<li><a href="https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.515411b75d2c6f189881937bda78ee73c359f789.pdf" target="_blank" rel="external">https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.515411b75d2c6f189881937bda78ee73c359f789.pdf</a></li>
+<li><a href="https://aws.amazon.com/documentation/?nc1=h_ls" target="_blank" rel="external">https://aws.amazon.com/documentation/?nc1=h_ls</a></li>
 </ul>
-<p>This might sound stupid, but I know some of the newcomers will be making same mistake as mine, so here goes.</p>
-<p>User that is going to be used in the replication process should be made from the MASTER server, not SLAVE server.<br>This means the master server will <em>recognize</em> the user from that domain you assign. Which means:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CREATE USER <span class="string">'repl_user'</span>@<span class="string">'mydomain.com'</span> IDENTIFIED BY <span class="string">'&lt;password&gt;'</span>;</div><div class="line">GRANT REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO <span class="string">'repl_user'</span>@<span class="string">'mydomain.com'</span> IDENTIFIED BY <span class="string">'&lt;password&gt;'</span>;</div></pre></td></tr></table></figure>
-<p>You will have to run this</p>
-<ol>
-<li>In your <strong>master</strong> server.</li>
-<li>That <em>‘mydomain.com’</em> part is host of RDS server. In other words, the <strong>RDS hostname</strong>, or its IP address. I don’t know about others, but the term ‘mydoman’ can be confusing. I put literally my server’s domain in first place.</li>
-</ol>
-<p>Other parts are pretty straightforward, so you should be okay.</p>
-<ul>
-<li><p>In official document, step 8 can be ANOTHER confusing part. The <code>mymasterserver.mydomain.com</code> here, is <strong>MASTER SERVER</strong>‘s domain. Since both step 6~7 and 8 says <em>mydomain.com</em>, I felt like it was very confusing for someone who tries this out for first time and have no server background like me.</p>
-</li>
-<li><p>Once it successes on replication process, you should check it by <code>show slave status\G;</code> command.<br>The message that says <em>Slave running normally</em> does NOT guarantee that it is actually running.</p>
-</li>
+<h4 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h4><ul>
+<li><a href="https://aws.amazon.com/ko/faqs/" target="_blank" rel="external">https://aws.amazon.com/ko/faqs/</a></li>
 </ul>
-<p>If you see error messages in the status, you should stop the replication by</p>
-<p><code>CALL mysql.rds_stop_replication;</code></p>
-<p>and change settings(it could be at your master server OR your slave server), start it again by</p>
-<p><code>CALL mysql.rds_start_replication;</code></p>
-<ul>
-<li>If it’s running successfully, you should see no errors and instead see something like<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Exec_Master_Log_Pos: 75456</div><div class="line">Relay_Log_Space: 76280</div><div class="line">...</div><div class="line">Seconds_Behind_Master: 0</div></pre></td></tr></table></figure>
-</li>
+<h4 id="Whitepapers"><a href="#Whitepapers" class="headerlink" title="Whitepapers"></a>Whitepapers</h4><ul>
+<li><a href="https://aws.amazon.com/whitepapers/" target="_blank" rel="external">https://aws.amazon.com/whitepapers/</a></li>
 </ul>
-<p>which is an indicator that your replication is running, showing gap with the master server.</p>
-<ul>
-<li>At your master server, you can also check if your DBs are connected well by commands like <code>show master status\G</code> or <code>show slave hosts\G</code>.</li>
+<h4 id="Dumps"><a href="#Dumps" class="headerlink" title="Dumps"></a>Dumps</h4><ul>
+<li><a href="http://www.briefmenow.org/amazon/which-of-the-following-cannot-be-used-in-amazon-ec2-to-control-who-has-access-to-specific-amazon-ec2-instances/" target="_blank" rel="external">http://www.briefmenow.org/amazon/which-of-the-following-cannot-be-used-in-amazon-ec2-to-control-who-has-access-to-specific-amazon-ec2-instances/</a></li>
 </ul>
 
         </div>
@@ -214,7 +196,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/" data-id="cj947qgr7001pzcua2dtmkr70" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://JiwonYeom.github.io/2017/10/23/preps-for-aws-saa/" data-id="cj947qgru002azcuatcdaorgj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -319,20 +301,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2017/09/22/preps-for-symfony-aws/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Symfony on AWS Linux
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/09/22/AWS-2/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/10/19/docker-container/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">AWS (2)</p>
+        <p class="article-nav-title">도커의 컨테이너</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -470,7 +442,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'jiwonyeom';
     
     
-    var disqus_url = 'http://JiwonYeom.github.io/2017/09/22/how-to-replicate-rds/';
+    var disqus_url = 'http://JiwonYeom.github.io/2017/10/23/preps-for-aws-saa/';
     
     (function() {
     var dsq = document.createElement('script');
