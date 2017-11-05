@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-10-23T13:24:12.191Z</updated>
+  <updated>2017-11-05T13:12:26.026Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning Python(1)</title>
+    <link href="http://JiwonYeom.github.io/2017/11/05/Learning-Python-1/"/>
+    <id>http://JiwonYeom.github.io/2017/11/05/Learning-Python-1/</id>
+    <published>2017-11-05T13:10:13.000Z</published>
+    <updated>2017-11-05T13:12:26.026Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;References : &lt;a href=&quot;https://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Learning
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://JiwonYeom.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Solution Architect Associate - Short summary</title>
+    <link href="http://JiwonYeom.github.io/2017/11/05/saa-short-summary/"/>
+    <id>http://JiwonYeom.github.io/2017/11/05/saa-short-summary/</id>
+    <published>2017-11-05T13:08:46.000Z</published>
+    <updated>2017-11-05T13:09:20.109Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;The instance performs a normal shutdown and stops running; its status changes to stopping and then stopped.&lt;/li&gt;
+&lt;li&gt;Any Amazon
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/tags/AWS/"/>
+    
+      <category term="SAA" scheme="http://JiwonYeom.github.io/tags/SAA/"/>
+    
+  </entry>
   
   <entry>
     <title>Preparation for AWS SAA Certificate</title>
@@ -243,64 +295,6 @@
       <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
     
       <category term="Framework" scheme="http://JiwonYeom.github.io/tags/Framework/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony Review-1</title>
-    <link href="http://JiwonYeom.github.io/2017/10/03/symfony-review-1/"/>
-    <id>http://JiwonYeom.github.io/2017/10/03/symfony-review-1/</id>
-    <published>2017-10-03T10:16:02.000Z</published>
-    <updated>2017-10-09T01:48:38.611Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I have been trying out Symfony today, and while I was working on it, I faced some difficulties and issues.&lt;br&gt;I decided to leave some
-        
-      
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
-    
-      <category term="Framework" scheme="http://JiwonYeom.github.io/tags/Framework/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Installing a Package</title>
-    <link href="http://JiwonYeom.github.io/2017/09/30/installing-package/"/>
-    <id>http://JiwonYeom.github.io/2017/09/30/installing-package/</id>
-    <published>2017-09-30T03:39:41.000Z</published>
-    <updated>2017-10-09T01:48:16.456Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Update existing software packages&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div
-        
-      
-    
-    </summary>
-    
-      <category term="Server" scheme="http://JiwonYeom.github.io/categories/Server/"/>
-    
-    
-      <category term="Server" scheme="http://JiwonYeom.github.io/tags/Server/"/>
     
   </entry>
   
