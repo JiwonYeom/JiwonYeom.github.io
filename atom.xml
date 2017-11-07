@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-11-05T13:12:26.026Z</updated>
+  <updated>2017-11-07T13:05:54.799Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AWS Cognito with JavaScript SDK</title>
+    <link href="http://JiwonYeom.github.io/2017/11/07/AWS-Cognito-with-JS-SDK/"/>
+    <id>http://JiwonYeom.github.io/2017/11/07/AWS-Cognito-with-JS-SDK/</id>
+    <published>2017-11-07T12:55:53.000Z</published>
+    <updated>2017-11-07T13:05:54.799Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;브라우저용 / node.js 용으로 구분하여 사용할 수 있는데, 여기서는 브라우저용을 사용한다.&lt;br&gt;&lt;em&gt;주의: 현재 IE 10+ 이상을 지원하므로, 테스트 용도로는 브라우저 세팅을 사용했으나 추후 node.js로 바꿔서
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/tags/AWS/"/>
+    
+      <category term="JavScript" scheme="http://JiwonYeom.github.io/tags/JavScript/"/>
+    
+      <category term="Cognito" scheme="http://JiwonYeom.github.io/tags/Cognito/"/>
+    
+      <category term="AWS SDK" scheme="http://JiwonYeom.github.io/tags/AWS-SDK/"/>
+    
+  </entry>
   
   <entry>
     <title>Learning Python(1)</title>
@@ -265,36 +296,6 @@
       <category term="blog" scheme="http://JiwonYeom.github.io/tags/blog/"/>
     
       <category term="TIL" scheme="http://JiwonYeom.github.io/tags/TIL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Symfony Review-2</title>
-    <link href="http://JiwonYeom.github.io/2017/10/06/symfony-review-2/"/>
-    <id>http://JiwonYeom.github.io/2017/10/06/symfony-review-2/</id>
-    <published>2017-10-06T10:16:05.000Z</published>
-    <updated>2017-10-09T01:48:43.856Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;Doctrine&quot;&gt;&lt;a href=&quot;#Doctrine&quot; class=&quot;headerlink&quot; title=&quot;Doctrine&quot;&gt;&lt;/a&gt;Doctrine&lt;/h4&gt;&lt;p&gt;Symfony does not have core component that
-        
-      
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
-    
-      <category term="Symfony" scheme="http://JiwonYeom.github.io/tags/Symfony/"/>
-    
-      <category term="Framework" scheme="http://JiwonYeom.github.io/tags/Framework/"/>
     
   </entry>
   
