@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-11-07T13:05:54.799Z</updated>
+  <updated>2017-11-07T13:08:37.646Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://JiwonYeom.github.io/2017/11/07/AWS-Cognito-with-JS-SDK/"/>
     <id>http://JiwonYeom.github.io/2017/11/07/AWS-Cognito-with-JS-SDK/</id>
     <published>2017-11-07T12:55:53.000Z</published>
-    <updated>2017-11-07T13:05:54.799Z</updated>
+    <updated>2017-11-07T13:08:37.646Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
       
     
     </summary>
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/categories/AWS/"/>
     
     
       <category term="AWS" scheme="http://JiwonYeom.github.io/tags/AWS/"/>
