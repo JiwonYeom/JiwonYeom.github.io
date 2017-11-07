@@ -54,7 +54,7 @@
     <link href="http://JiwonYeom.github.io/2017/11/05/Learning-Python-1/"/>
     <id>http://JiwonYeom.github.io/2017/11/05/Learning-Python-1/</id>
     <published>2017-11-05T13:10:13.000Z</published>
-    <updated>2017-11-05T13:12:26.026Z</updated>
+    <updated>2017-11-07T13:10:50.718Z</updated>
     
     <summary type="html">
     
@@ -68,6 +68,8 @@
     
     </summary>
     
+      <category term="Python" scheme="http://JiwonYeom.github.io/categories/Python/"/>
+    
     
       <category term="Python" scheme="http://JiwonYeom.github.io/tags/Python/"/>
     
@@ -78,7 +80,7 @@
     <link href="http://JiwonYeom.github.io/2017/11/05/saa-short-summary/"/>
     <id>http://JiwonYeom.github.io/2017/11/05/saa-short-summary/</id>
     <published>2017-11-05T13:08:46.000Z</published>
-    <updated>2017-11-05T13:09:20.109Z</updated>
+    <updated>2017-11-07T13:11:32.943Z</updated>
     
     <summary type="html">
     
@@ -93,6 +95,8 @@
       
     
     </summary>
+    
+      <category term="AWS" scheme="http://JiwonYeom.github.io/categories/AWS/"/>
     
     
       <category term="AWS" scheme="http://JiwonYeom.github.io/tags/AWS/"/>
