@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JiwonYeom.github.io/"/>
-  <updated>2017-11-07T13:08:37.646Z</updated>
+  <updated>2017-11-13T13:11:20.297Z</updated>
   <id>http://JiwonYeom.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP Predefined Variables &amp; Magic Constants</title>
+    <link href="http://JiwonYeom.github.io/2017/11/13/php-predefined/"/>
+    <id>http://JiwonYeom.github.io/2017/11/13/php-predefined/</id>
+    <published>2017-11-13T13:05:42.000Z</published>
+    <updated>2017-11-13T13:11:20.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Predefined-Variables&quot;&gt;&lt;a href=&quot;#Predefined-Variables&quot; class=&quot;headerlink&quot; title=&quot;Predefined Variables&quot;&gt;&lt;/a&gt;Predefined
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
+    
+    
+      <category term="TIL" scheme="http://JiwonYeom.github.io/tags/TIL/"/>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP Unit Test Study</title>
+    <link href="http://JiwonYeom.github.io/2017/11/13/php-unittest/"/>
+    <id>http://JiwonYeom.github.io/2017/11/13/php-unittest/</id>
+    <published>2017-11-13T13:05:01.000Z</published>
+    <updated>2017-11-13T13:12:12.341Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;My personal attempt to learn &lt;code&gt;unit test&lt;/code&gt; in PHP, using &lt;code&gt;PHPUnit&lt;/code&gt;. &lt;br&gt;&lt;br&gt;I used two following examples to
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/categories/PHP/"/>
+    
+    
+      <category term="TIL" scheme="http://JiwonYeom.github.io/tags/TIL/"/>
+    
+      <category term="PHP" scheme="http://JiwonYeom.github.io/tags/PHP/"/>
+    
+      <category term="Unit Test" scheme="http://JiwonYeom.github.io/tags/Unit-Test/"/>
+    
+      <category term="PHPUnit" scheme="http://JiwonYeom.github.io/tags/PHPUnit/"/>
+    
+  </entry>
   
   <entry>
     <title>AWS Cognito with JavaScript SDK</title>
@@ -245,63 +305,6 @@
       <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
     
       <category term="Google Analytics" scheme="http://JiwonYeom.github.io/tags/Google-Analytics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Pages With Hexo</title>
-    <link href="http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/"/>
-    <id>http://JiwonYeom.github.io/2017/10/08/GithubPages-Hexo/</id>
-    <published>2017-10-08T10:36:03.000Z</published>
-    <updated>2017-10-09T01:47:38.639Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;After around 2 full months of keeping up TIL repository, I’ve FINALLY managed to move on to Github Pages.&lt;/p&gt;
-&lt;p&gt;There were several
-        
-      
-    
-    </summary>
-    
-      <category term="Uncategorized" scheme="http://JiwonYeom.github.io/categories/Uncategorized/"/>
-    
-    
-      <category term="Hexo" scheme="http://JiwonYeom.github.io/tags/Hexo/"/>
-    
-      <category term="Blog" scheme="http://JiwonYeom.github.io/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TIL to blog</title>
-    <link href="http://JiwonYeom.github.io/2017/10/08/TIL-to-blog/"/>
-    <id>http://JiwonYeom.github.io/2017/10/08/TIL-to-blog/</id>
-    <published>2017-10-08T09:24:20.000Z</published>
-    <updated>2017-10-09T01:48:54.586Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;So I am moving away from TIL repository to a blog, where I can just store random thoughts and code snippets.&lt;br&gt;I’ll still use Medium
-        
-      
-    
-    </summary>
-    
-      <category term="Uncategorized" scheme="http://JiwonYeom.github.io/categories/Uncategorized/"/>
-    
-    
-      <category term="blog" scheme="http://JiwonYeom.github.io/tags/blog/"/>
-    
-      <category term="TIL" scheme="http://JiwonYeom.github.io/tags/TIL/"/>
     
   </entry>
   

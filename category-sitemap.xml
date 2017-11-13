@@ -63,13 +63,6 @@
     </url>
 
     <url>
-        <loc>http://JiwonYeom.github.io/categories/PHP/</loc>
-        <lastmod>2017-10-09T01:48:43.856Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://JiwonYeom.github.io/categories/Uncategorized/</loc>
         <lastmod>2017-10-09T01:48:54.586Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -93,6 +86,13 @@
     <url>
         <loc>http://JiwonYeom.github.io/categories/AWS/</loc>
         <lastmod>2017-11-07T13:11:32.943Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://JiwonYeom.github.io/categories/PHP/</loc>
+        <lastmod>2017-11-13T13:12:12.341Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

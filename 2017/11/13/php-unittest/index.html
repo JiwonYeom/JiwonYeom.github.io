@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>PHP Unit Test Study | Code Jingles</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="TIL,PHP,Unit Test,PHPUnit" />
+    
+    <meta name="description" content="My personal attempt to learn unit test in PHP, using PHPUnit. I used two following examples to learn. reference1: https://www.youtube.com/watch?v=-9YVcssCACI reference2: https://www.youtube.com/watch?">
+<meta name="keywords" content="TIL,PHP,Unit Test,PHPUnit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP Unit Test Study">
+<meta property="og:url" content="http://JiwonYeom.github.io/2017/11/13/php-unittest/index.html">
+<meta property="og:site_name" content="Code Jingles">
+<meta property="og:description" content="My personal attempt to learn unit test in PHP, using PHPUnit. I used two following examples to learn. reference1: https://www.youtube.com/watch?v=-9YVcssCACI reference2: https://www.youtube.com/watch?">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-13T13:12:12.341Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP Unit Test Study">
+<meta name="twitter:description" content="My personal attempt to learn unit test in PHP, using PHPUnit. I used two following examples to learn. reference1: https://www.youtube.com/watch?v=-9YVcssCACI reference2: https://www.youtube.com/watch?">
+    <link rel="canonical" href="http://JiwonYeom.github.io/2017/11/13/php-unittest/"/>
+    
+
+    <!-- add font for custom -->
+    <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-107714750-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo_font">Code Jingles</a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/PHP/">PHP</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-php-unittest" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        PHP Unit Test Study
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/11/13/php-unittest/" class="article-date">
+            <time datetime="2017-11-13T13:05:01.000Z" itemprop="datePublished">2017-11-13</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/PHP/">PHP</a>, <a class="tag-link" href="/tags/PHPUnit/">PHPUnit</a>, <a class="tag-link" href="/tags/TIL/">TIL</a>, <a class="tag-link" href="/tags/Unit-Test/">Unit Test</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>My personal attempt to learn <code>unit test</code> in PHP, using <code>PHPUnit</code>. <br><br>I used two following examples to learn.</p>
+<p>reference1: <a href="https://www.youtube.com/watch?v=-9YVcssCACI" target="_blank" rel="external">https://www.youtube.com/watch?v=-9YVcssCACI</a> <br><br>reference2: <a href="https://www.youtube.com/watch?v=84j61_aI0q8" target="_blank" rel="external">https://www.youtube.com/watch?v=84j61_aI0q8</a></p>
+<h4 id="Tutorial-1"><a href="#Tutorial-1" class="headerlink" title="Tutorial 1"></a>Tutorial 1</h4><ul>
+<li>Composer is necessary for PHPUnit</li>
+</ul>
+<ol>
+<li><p>Include PHPUnit framework in composer. Open <code>composer.json</code> &amp; include the following</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"require-dev":&#123;</div><div class="line">    "phpunit/phpunit": "3.7.*"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>run <code>composer update</code>. This generates phpunit files.</p>
+</li>
+<li><p>create folder for tests. Organize it into appropriate structure.</p>
+</li>
+<li><p>Declare class in the test file</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PagesTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>execute it by <code>phpunit [file]</code> at commandline.</p>
+</li>
+<li><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PagesTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testRenderReturnsHelloWorld</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $pages = <span class="keyword">new</span> \Controllers\Core\Web\Pages();</div><div class="line">        $expected = <span class="string">'Hello World'</span>;</div><div class="line">        <span class="keyword">$this</span>-&gt;assertEquals($expected, $pages-&gt;render());</div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Create <code>phpunit.xml</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> <span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">phpunit</span> <span class="attr">bootstrap</span>=<span class="string">"./vendor/autoload.php"</span></span></div><div class="line"><span class="tag">         <span class="attr">color</span>=<span class="string">"true"</span></span></div><div class="line"><span class="tag">         <span class="attr">convertErrorsToExceptions</span>=<span class="string">"true"</span></span></div><div class="line"><span class="tag">         <span class="attr">convertNoticesToExceptions</span>=<span class="string">"true"</span></span></div><div class="line"><span class="tag">         <span class="attr">convertWarningsToExceptions</span>=<span class="string">"true"</span></span></div><div class="line"><span class="tag">         <span class="attr">stopOnFailures</span>=<span class="string">"false"</span></span></div><div class="line"><span class="tag">         <span class="attr">syntaxCheck</span>=<span class="string">"false"</span></span></div><div class="line"><span class="tag">         &gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">testsuites</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">testsuite</span> <span class="attr">name</span>=<span class="string">"Tutorial Unit Tests"</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!-- indicating the test directory --&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>./tests/<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">testsuite</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">testsuites</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">phpunit</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>add test for other functions</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PagesTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testRenderReturnsHelloWorld</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $pages = <span class="keyword">new</span> \Controllers\Core\Web\Pages();</div><div class="line">        $expected = <span class="string">'Hello World'</span>;</div><div class="line">        <span class="keyword">$this</span>-&gt;assertEquals($expected, $pages-&gt;render());</div><div class="line">    &#125;   </div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testReturnTrueReturnsTrue</span><span class="params">()</span></span>&#123;</div><div class="line">        $pages = <span class="keyword">new</span> \Controllers\Core\Web\Pages();</div><div class="line">        <span class="keyword">$this</span>-&gt;assertTrue($pages-&gt;returnTrue());</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testReturnArrayReturnsValidArray</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $pages = <span class="keyword">new</span> \Controllers\Core\Web\Pages();</div><div class="line">        <span class="keyword">$this</span>-&gt;assertTrue(is_array($pages-&gt;returnArray()));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testReturnArrayReturnsNonEmptyArray</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $pages = <span class="keyword">new</span> \Controllers\Core\Web\Pages();</div><div class="line">        <span class="keyword">$this</span>-&gt;assertTrue((count($pates-&gt;returnArray() &gt; <span class="number">0</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="Tutorial-2"><a href="#Tutorial-2" class="headerlink" title="Tutorial 2"></a>Tutorial 2</h4><ol>
+<li><p>Create <code>test</code> directory and make testcase.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CalculatorTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> funtion testAddNumbers()</div><div class="line">    &#123;</div><div class="line">        $calc = <span class="keyword">new</span> Calculator;</div><div class="line">        <span class="keyword">$this</span>-&gt;assertEquals(<span class="number">4</span>, $calc-&gt;add(<span class="number">2</span>,<span class="number">2</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Create <code>app</code> directory and <code>libraries</code> directory in it.</p>
+</li>
+<li><p>add <code>require</code> keyword to the test file.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// but this means everytime we add classes &amp; dependencies, we need to add require statement. Let's automate it with composer</span></div><div class="line"><span class="keyword">require</span> <span class="string">'app/libraries/Calculator.php'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CalculatorTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> funtion testAddNumbers()</div><div class="line">    &#123;</div><div class="line">        $calc = <span class="keyword">new</span> Calculator;</div><div class="line">        <span class="keyword">$this</span>-&gt;assertEquals(<span class="number">4</span>, $calc-&gt;add(<span class="number">2</span>,<span class="number">2</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Create <code>composer.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"autoload"</span>:&#123;</div><div class="line">        <span class="attr">"classmap"</span>: [</div><div class="line">            <span class="string">"app/libraries"</span></div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>run <code>composer install</code></p>
+</li>
+<li><p>Add <code>require &#39;vendor/autoload.php&#39;</code> to the test file instead of the path require.</p>
+</li>
+<li><p>That works, but use <code>phpunit.xml</code> to do bootstrapping.</p>
+</li>
+<li><p>Use <code>namespace</code> by adding</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Libraries</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>regenerate <code>autoload_classmap.php</code>, so that namespace can be applied.</p>
+</li>
+<li><p>add </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// including specific class using namespace</span></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Libraries</span>\<span class="title">Calculator</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CalculatorTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span></span>&#123;</div><div class="line">    <span class="keyword">public</span> funtion testAddNumbers()</div><div class="line">    &#123;</div><div class="line">        $calc = <span class="keyword">new</span> Calculator;</div><div class="line">        <span class="keyword">$this</span>-&gt;assertEquals(<span class="number">4</span>, $calc-&gt;add(<span class="number">2</span>,<span class="number">2</span>));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testThrowsExceptionIfNonNumericIsPassed</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $calc = <span class="keyword">new</span> Calculator;</div><div class="line">        $calc-&gt;add(<span class="string">'a'</span>, []);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Throw exception for non-numeric input</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Libraries</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Calculator</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">($x, $y)</span></span>&#123;</div><div class="line">        <span class="comment">// wrong. Should be numeric instead of int</span></div><div class="line">        <span class="comment">// if ( ! is_int($x) or ! is_int($y))&#123;</span></div><div class="line">        <span class="keyword">if</span> ( ! is_numeric($x) <span class="keyword">or</span> ! is_numeric($y))&#123;</div><div class="line">            <span class="comment">// `\` indicates this is a global exception, not a local exception.</span></div><div class="line">            <span class="comment">// if '\' is not here, it considers as local (App\Libraries\InvalidArgumentException) exception can causes error</span></div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> \InvalidArgumentException;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> $x + $y;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Make the test expect an exception</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// including specific class using namespace</span></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Libraries</span>\<span class="title">Calculator</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CalculatorTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span></span>&#123;</div><div class="line">    <span class="keyword">public</span> funtion testAddNumbers()</div><div class="line">    &#123;</div><div class="line">        $calc = <span class="keyword">new</span> Calculator;</div><div class="line">        $values = [</div><div class="line">            [<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>],</div><div class="line">            [<span class="number">2.5</span>,<span class="number">2.5</span>,<span class="number">5</span>],</div><div class="line">            [<span class="number">-3</span>,<span class="number">1</span>,<span class="number">-2</span>]</div><div class="line">        ];</div><div class="line"></div><div class="line">        <span class="keyword">foreach</span>($values <span class="keyword">as</span> $nums)&#123;</div><div class="line">            <span class="keyword">$this</span>-&gt;assertEquals($numbers[<span class="number">2</span>], $calc-&gt;add($numbers[<span class="number">0</span>], $numbers[<span class="number">1</span>]));</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// $this-&gt;assertEquals(4, $calc-&gt;add(2,2));</span></div><div class="line">        <span class="comment">// // add another assert</span></div><div class="line">        <span class="comment">// $this-&gt;assertEquals(5, $calc-&gt;add(2.5,2.5));</span></div><div class="line">        <span class="comment">// $this-&gt;assertEquals(-2, $calc-&gt;add(-3,1));</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * <span class="doctag">@expectedException</span> InvalidArgumentException</span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testThrowsExceptionIfNonNumericIsPassed</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        $calc = <span class="keyword">new</span> Calculator;</div><div class="line">        $calc-&gt;add(<span class="string">'a'</span>, []);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Abstract out your tests using PHPUnit.</p>
+</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// including specific class using namespace</span></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Libraries</span>\<span class="title">Calculator</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CalculatorTest</span> <span class="keyword">extends</span> <span class="title">PHPUnit_Framework_TestCase</span></span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">setUp</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;calculator = <span class="keyword">new</span> Calculator;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">inputNumbers</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        <span class="keyword">return</span> [</div><div class="line">            [<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>],</div><div class="line">            [<span class="number">2.5</span>,<span class="number">2.5</span>,<span class="number">5</span>],</div><div class="line">            [<span class="number">-3</span>,<span class="number">1</span>,<span class="number">-2</span>]</div><div class="line">        ];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * <span class="doctag">@dataProvider</span> inputNumbers</span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="keyword">public</span> funtion testAddNumbers($x, $y, $sum)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;assertEquals($sum, <span class="keyword">$this</span>-&gt;calculator-&gt;add($x, $y));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * <span class="doctag">@expectedException</span> InvalidArgumentException</span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">testThrowsExceptionIfNonNumericIsPassed</span><span class="params">()</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;calculator-&gt;add(<span class="string">'a'</span>, []);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://JiwonYeom.github.io/2017/11/13/php-unittest/" data-id="cj9y7heda002axguak13v39yr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Jiwon0603" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/JiwonYeom" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/11/13/php-predefined/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            PHP Predefined Variables &amp; Magic Constants
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/11/07/AWS-Cognito-with-JS-SDK/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">AWS Cognito with JavaScript SDK</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+                            <p class="item-title"><a href="/2017/11/13/php-predefined/" class="title">PHP Predefined Variables &amp; Magic Constants</a></p>
+                            <p class="item-date"><time datetime="2017-11-13T13:05:42.000Z" itemprop="datePublished">2017-11-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+                            <p class="item-title"><a href="/2017/11/13/php-unittest/" class="title">PHP Unit Test Study</a></p>
+                            <p class="item-date"><time datetime="2017-11-13T13:05:01.000Z" itemprop="datePublished">2017-11-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/AWS/">AWS</a></p>
+                            <p class="item-title"><a href="/2017/11/07/AWS-Cognito-with-JS-SDK/" class="title">AWS Cognito with JavaScript SDK</a></p>
+                            <p class="item-date"><time datetime="2017-11-07T12:55:53.000Z" itemprop="datePublished">2017-11-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2017/11/05/Learning-Python-1/" class="title">Learning Python(1)</a></p>
+                            <p class="item-date"><time datetime="2017-11-05T13:10:13.000Z" itemprop="datePublished">2017-11-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/AWS/">AWS</a></p>
+                            <p class="item-title"><a href="/2017/11/05/saa-short-summary/" class="title">AWS Solution Architect Associate - Short summary</a></p>
+                            <p class="item-date"><time datetime="2017-11-05T13:08:46.000Z" itemprop="datePublished">2017-11-05</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Analysis/">Data Analysis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Devops/">Devops</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML-CSS/">HTML&CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Network/">Network</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AWS/" style="font-size: 16px;">AWS</a> <a href="/tags/AWS-SDK/" style="font-size: 10px;">AWS SDK</a> <a href="/tags/Amazon-Linux/" style="font-size: 10px;">Amazon Linux</a> <a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/BEM/" style="font-size: 12px;">BEM</a> <a href="/tags/Beginner/" style="font-size: 12px;">Beginner</a> <a href="/tags/Blog/" style="font-size: 14px;">Blog</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/CURL/" style="font-size: 10px;">CURL</a> <a href="/tags/Class/" style="font-size: 12px;">Class</a> <a href="/tags/Closure/" style="font-size: 10px;">Closure</a> <a href="/tags/Codeigniter/" style="font-size: 10px;">Codeigniter</a> <a href="/tags/Cognito/" style="font-size: 10px;">Cognito</a> <a href="/tags/Container/" style="font-size: 10px;">Container</a> <a href="/tags/DB/" style="font-size: 10px;">DB</a> <a href="/tags/DNS/" style="font-size: 12px;">DNS</a> <a href="/tags/Data-Structure/" style="font-size: 14px;">Data Structure</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Framework/" style="font-size: 12px;">Framework</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Google-Analytics/" style="font-size: 10px;">Google Analytics</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/HTTP/" style="font-size: 12px;">HTTP</a> <a href="/tags/Hexo/" style="font-size: 12px;">Hexo</a> <a href="/tags/JavScript/" style="font-size: 10px;">JavScript</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/NGINX/" style="font-size: 12px;">NGINX</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/PHPUnit/" style="font-size: 10px;">PHPUnit</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Replication/" style="font-size: 10px;">Replication</a> <a href="/tags/SAA/" style="font-size: 10px;">SAA</a> <a href="/tags/Server/" style="font-size: 14px;">Server</a> <a href="/tags/Soultion-Architect-Associate/" style="font-size: 10px;">Soultion Architect Associate</a> <a href="/tags/Symfony/" style="font-size: 14px;">Symfony</a> <a href="/tags/TIL/" style="font-size: 14px;">TIL</a> <a href="/tags/Unit-Test/" style="font-size: 10px;">Unit Test</a> <a href="/tags/VM/" style="font-size: 10px;">VM</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">11</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/JiwonYeom/TIL">TIL(GitHub)</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo_font">Code Jingles</a>
+                </h1>
+                <p>&copy; 2017 Jiwon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'jiwonyeom';
+    
+    
+    var disqus_url = 'http://JiwonYeom.github.io/2017/11/13/php-unittest/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
